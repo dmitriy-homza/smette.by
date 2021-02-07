@@ -63,11 +63,105 @@ main {
         }
     }
     .services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         h2 {
             margin-top: 62px;
             font-size: 48px;
             text-align: center;
             font-weight: 700;
+        }
+        .service-cards-wrapper {
+            margin-top: 50px;
+            max-width: 1140px;
+            width: 100%;
+            .service-card {
+                h3 {
+                    text-align: center;
+                    font-size: 24px;
+                }
+                .card-img {
+                    width: 360px;
+                    height: 277px;
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: column-reverse;
+                    align-items: center;
+                }
+                .img1 {
+                    background-image: url("../images/service1.png");
+                }
+                .img2 {
+                    background-image: url("../images/service2.png");
+                }
+                .img3 {
+                    background-image: url("../images/service3.png");
+                }
+                .img4 {
+                    background-image: url("../images/service4.png");
+                }
+                .img5 {
+                    background-image: url("../images/service5.png");
+                }
+                .img6 {
+                    background-image: url("../images/service6.png");
+                }
+                a {
+                    background-color: $yellow-primary;
+                    color: white;
+                    height: 45px;
+                    width: 225px;
+                    text-align: center;
+                    display: flex;
+                    margin-bottom: 20px;
+                    border-radius: 12px;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .take-number {
+            h2 {
+                color: $yellow-primary;
+            }
+            .form {
+                width: 870px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .submit-button {
+                    background-color: $yellow-primary;
+                    color: white;
+                    font-weight: 800;
+                }
+                .react-tel-input {
+                    .form-control {
+                        color: $yellow-primary;
+                        border: 7px solid $yellow-primary;
+                    }
+                    .flag-dropdown {
+                        display: none;
+                        background-color: inherit;
+                        border: none;
+                        border-radius: 0px;
+                    }
+                }
+                .number-input {
+                    color: $yellow-primary;
+                    border: 7px solid $yellow-primary;
+                    padding: 10px 15px;
+                }
+                input {
+                    border-radius: 12px;
+                    font-weight: 800;
+                    width: 420px;
+                    height: 110px;
+                    border: 0px;
+                    outline: 0px;
+                    font-size: 30px;
+                }
+            }
         }
     }
 }
