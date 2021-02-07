@@ -132,9 +132,19 @@ $grid-breakpoints: (
 
 $yellow-primary: #ffbd00;
 
+a {
+  color: black;
+  & span:hover,
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
 header,
 footer,
-main {
+main,
+section {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -160,7 +170,7 @@ header {
       height: 105px;
       .navbar-collapse {
         flex-grow: 1;
-        max-width: 620px;
+        max-width: 640px;
         ul {
           width: 100%;
           display: flex;
@@ -171,8 +181,9 @@ header {
         color: white;
         font-weight: 600;
         p {
-          line-height: 17px;
+          line-height: 23px;
           margin-bottom: 0px;
+          font-size: 22px;
         }
       }
       img {
@@ -180,7 +191,7 @@ header {
         height: 40px;
       }
       a {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 600;
         color: white;
       }
@@ -200,18 +211,20 @@ header {
       width: 100%;
       align-items: center;
       height: 67px;
-      div {
+      div,
+      div a {
         display: flex;
         align-items: center;
         a {
-          padding-right: 8px;
+          padding-left: 8px;
           img {
             width: 20px;
           }
         }
         span {
           font-size: 20px;
-          font-weight: 600;
+          font-weight: 700;
+          padding-left: 8px;
         }
       }
     }

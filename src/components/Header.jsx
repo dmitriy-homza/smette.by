@@ -59,19 +59,26 @@ const Header = () => {
       <div className="info-line">
         <div className="wrapper">
           <div>
-            <a href="tel:+375445749949"><img src={A1} alt="A1" /></a>
-            <a href="/"><img src={viber} alt="Viber" /></a>
-            <a href="/"><img src={whatsapp} alt="Whatsapp" /></a>
-            <a href="/"><img src={telegram} alt="Telegram" /></a>
-            <span>+375445749949</span>
+            <a href="tel:+375445749949">
+              <img src={A1} alt="A1" />
+              <a href="viber://chat?number=375445749949"><img src={viber} alt="Viber" /></a>
+              <a href="https://wa.me/+375445749949"><img src={whatsapp} alt="Whatsapp" /></a>
+              <a href="tg://resolve?domain=+375445749949"><img src={telegram} alt="Telegram" /></a>
+              <span>+375445749949</span>
+            </a>
           </div>
           <div>
-            <a href="tel:+375333549949"><img src={mts} alt="MTS" /></a>
-            <span>+375333549949</span>
+            <a href="tel:+375333549949">
+              <img src={mts} alt="MTS" />
+              <span>+375333549949</span>
+
+            </a>
           </div>
           <div>
-            <a href="mailto:tv@smette.by"><img src={email} alt="Email" /></a>
-            <span>tv@smette.by</span>
+            <a href="mailto:tv@smette.by">
+              <img src={email} alt="Email" />
+              <span>tv@smette.by</span>
+            </a>
           </div>
         </div>
 

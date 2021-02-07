@@ -1,5 +1,8 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import '../styles/index.scss';
+import carImg from '../images/car.png';
+import line from '../images/line.png';
 
 export default () => (
   <>
@@ -9,11 +12,15 @@ export default () => (
           <div className="wrapper">
             <div className="text-block">
               <h1>
-                Вывоз мусора и перевозки
+                <span>Вывоз мусора</span>
+                {' '}
+                и перевозки
+                <br />
                 по Минску и
+                <br />
                 Минской области
               </h1>
-              <img src="" alt="line" />
+              <img className="line" src={line} alt="line" />
               <ul>
                 <li>пунктуальность и индивидуальный подход</li>
                 <li>опыт работы более 5 лет</li>
@@ -21,7 +28,7 @@ export default () => (
                 <li>низкие цены доступные для всех</li>
               </ul>
             </div>
-            <img src="" alt="Car" />
+            <img className="car-img" src={carImg} alt="Car" />
           </div>
         </section>
         <section className="services">
@@ -84,7 +91,6 @@ export default () => (
                   +375445749949
                 </li>
                 <li>+375333549949</li>
-
               </ul>
             </p>
           </div>
