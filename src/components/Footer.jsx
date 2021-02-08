@@ -10,12 +10,12 @@ export default function Footer() {
   return (
     <footer>
       <div className="wrapper">
-        <Navbar className="d-flex w-100 justify-content-between" color="light" light expand="md">
+        <Navbar className="d-flex w-100 justify-content-between" expand="md">
           <NavbarBrand tag={Link} to="/" className="garamond">
             <img src={logo} alt="Logo" />
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
+          <Collapse className="justify-content-between" isOpen={isOpen} navbar>
             <Nav navbar vertical>
               <h4>Телефоны</h4>
               <NavItem>
@@ -74,7 +74,7 @@ export default function Footer() {
                 </NavLink>
               </NavItem>
             </Nav>
-            <Nav navbar vertical>
+            <Nav className="last-group" navbar vertical>
               <NavItem>
                 <NavLink tag={Link} to="/cars" activeClassName="active">
                   <h4>Автопарк</h4>

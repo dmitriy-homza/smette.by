@@ -230,3 +230,42 @@ header {
     }
   }
 }
+
+footer {
+  color: $yellow-primary;
+  background-image: url("../images/trash-bg.png");
+  background-position: 0% -42%;
+  .wrapper {
+    padding: 50px 0px;
+    max-width: 1180px;
+    width: 100%;
+    nav {
+      align-items: end;
+      ul {
+        li {
+          a {
+            font-size: 18px;
+            color: white;
+            padding: 0px !important;
+          }
+        }
+      }
+      .navbar-collapse {
+        margin-left: 60px;
+        align-items: baseline;
+      }
+      img {
+        width: 230px;
+      }
+    }
+    h4 {
+      font-size: 24px;
+      color: $yellow-primary;
+    }
+    .last-group {
+      li {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
