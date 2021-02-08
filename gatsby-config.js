@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'smette.by',
+    siteUrl: 'https://smette.onagracija.by/',
   },
-  plugins: [
+  plugins: ['gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-firebase',
       options: {
