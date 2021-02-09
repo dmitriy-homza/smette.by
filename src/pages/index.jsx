@@ -213,7 +213,7 @@ export default () => {
               <p>
                 Коммерческие предложения просим высылать на электронную почту -
                 {' '}
-                <span>tv@smette.by</span>
+                <span><a href="mailto:tv@smette.by">tv@smette.by</a></span>
               </p>
             </div>
             <div className="take-number">
@@ -261,7 +261,7 @@ export default () => {
             <div className="contacts-wrapper d-flex justify-content-between">
               <div className="map">
                 <div>
-                  <iframe src="https://yandex.by/map-widget/v1/-/CCUMJORE0D" width="680" height="425" frameBorder="1" allowFullScreen="true" />
+                  <iframe src="https://yandex.by/map-widget/v1/-/CCUMJORE0D" width="680" height="475" frameBorder="1" allowFullScreen="true" />
                 </div>
               </div>
               <div className="contacts-details">
@@ -278,17 +278,17 @@ export default () => {
                   <span>Телефоны:</span>
                   <ul>
                     <li>
-                      +375445749949
+                      <a href="tel:+375445749949">+375445749949</a>
                     </li>
-                    <li>+375333549949</li>
+                    <li><a href="tel:+375333549949">+375333549949</a></li>
                   </ul>
                 </p>
-                <p>
+                <p className="underlined">
                   <span>
                     Электронная почта:
                     {' '}
                   </span>
-                  tv@smette.by
+                  <a href="mailto:tv@smette.by">tv@smette.by</a>
                 </p>
                 <p>
                   <span>
