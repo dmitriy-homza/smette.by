@@ -55,6 +55,7 @@ section {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: #f7f5f5;
   .wrapper {
     width: 100%;
     max-width: 1180px;
@@ -87,6 +88,15 @@ header {
           width: 100%;
           display: flex;
           justify-content: space-between;
+          li {
+            a {
+              font-size: 18px;
+              font-weight: 400;
+            }
+            a:after {
+              content: unset;
+            }
+          }
         }
       }
       .work-time {
@@ -95,7 +105,7 @@ header {
         p {
           line-height: 23px;
           margin-bottom: 0px;
-          font-size: 22px;
+          font-size: 18px;
         }
       }
       img {
@@ -110,7 +120,7 @@ header {
     }
   }
   .info-line {
-    background-color: white;
+    background-color: #f7f5f5;
     display: flex;
     justify-content: center;
     width: 100%;
