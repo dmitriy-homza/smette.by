@@ -38,6 +38,15 @@ $grid-breakpoints: (
 
 $yellow-primary: #ffbd00;
 
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 a {
   color: black;
   & span:hover,
@@ -84,6 +93,25 @@ header {
       .navbar-collapse {
         flex-grow: 1;
         max-width: 640px;
+        .dropdown-menu {
+          top: -5px !important;
+          background-color: #191919;
+          color: #f7f5f5;
+          animation: opacity 0.3s;
+          button,
+          a {
+            font-size: 17px;
+            background-color: #191919;
+            color: #f7f5f5;
+            transition: 0.3s;
+          }
+          a:hover,
+          button:hover {
+            transition: 0.3s;
+            color: $yellow-primary;
+            background-color: #272727;
+          }
+        }
         ul {
           width: 100%;
           display: flex;
@@ -92,6 +120,12 @@ header {
             a {
               font-size: 18px;
               font-weight: 400;
+              transition: 0.3s;
+            }
+            &.show > a,
+            a:hover {
+              transition: 0.3s;
+              color: $yellow-primary;
             }
             a:after {
               content: unset;

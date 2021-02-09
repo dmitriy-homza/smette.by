@@ -69,7 +69,7 @@ export default function Footer() {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/contacts" activeClassName="active">
+                <NavLink tag={Link} to="/movers" activeClassName="active">
                   Услуги грузчиков
                 </NavLink>
               </NavItem>

@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
+import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import '../styles/index.scss';
 import carImg from '../images/car.png';
@@ -85,7 +86,7 @@ export default () => {
               <div className="service-card col-4">
                 <h3>Услуги грузчиков</h3>
                 <div className="card-img img6">
-                  <a href="/">Подробная стоимость</a>
+                  <a tag={Link} to="/movers">Подробная стоимость</a>
                 </div>
               </div>
             </div>
