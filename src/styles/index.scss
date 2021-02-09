@@ -37,27 +37,27 @@ $yellow-primary: #ffbd00;
 
 .viber {
     transition: 0.3s;
+    border-radius: 50%;
     &:hover {
         transition: 0.3s;
-        border-radius: 50%;
         box-shadow: 0 0 7px 1px #8400ff;
     }
 }
 
 .telegram {
     transition: 0.3s;
+    border-radius: 50%;
     &:hover {
         transition: 0.3s;
-        border-radius: 50%;
         box-shadow: 0 0 7px 1px #008cff;
     }
 }
 
 .whatsapp {
     transition: 0.3s;
+    border-radius: 50%;
     &:hover {
         transition: 0.3s;
-        border-radius: 50%;
         box-shadow: 0 0 7px 1px #0fb800;
     }
 }
@@ -132,7 +132,9 @@ main {
     .hello {
         width: 100%;
         height: 725px;
-        background-image: url("../images/hello-bg.png");
+        background-image: url("../images/trash-bg.jpg");
+        background-position-y: 90%;
+        background-size: 100%;
         .wrapper {
             display: flex;
             flex-direction: row;
@@ -322,7 +324,7 @@ main {
     }
     .auto {
         height: 1850px;
-        background: url("../images/trash-bg.png");
+        background: url("../images/trash-bg.jpg");
         width: 100%;
         justify-content: end;
         h2 {

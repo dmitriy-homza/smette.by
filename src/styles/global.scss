@@ -69,7 +69,9 @@ body {
 }
 
 header {
-  background-image: url("../images/header-bg.png");
+  background-image: url("../images/trash-bg.jpg");
+  background-position-y: 50%;
+  background-size: 100%;
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -143,7 +145,7 @@ header {
 
 footer {
   color: $yellow-primary;
-  background-image: url("../images/trash-bg.png");
+  background-image: url("../images/trash-bg.jpg");
   background-position: 0% -42%;
   .wrapper {
     padding: 50px 0px;

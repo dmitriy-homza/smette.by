@@ -1,7 +1,8 @@
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem } from 'reactstrap';
+import { Collapse, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem } from 'reactstrap';
 import logo from '../images/logo.png';
 import mts from '../images/mts.png';
 import A1 from '../images/A1.png';
@@ -13,6 +14,7 @@ import telegram from '../images/telegram.png';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <header>
       <div className="wrapper">
@@ -24,11 +26,18 @@ const Header = () => {
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
               <Nav className="mr-auto" navbar>
-                <NavItem>
-                  <NavLink tag={Link} to="/services" activeClassName="active">
+                <Dropdown nav isOpen={dropdownOpen} onMouseLeave={() => setDropdownOpen(false)} onMouseEnter={() => setDropdownOpen(true)}>
+                  <DropdownToggle nav caret>
                     Услуги и стоимость
-                  </NavLink>
-                </NavItem>
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem header>Header</DropdownItem>
+                    <DropdownItem disabled>Action</DropdownItem>
+                    <DropdownItem>Another Action</DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>Another Action</DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
                 <NavItem>
                   <NavLink tag={Link} to="/cars" activeClassName="active">
                     Автопарк
