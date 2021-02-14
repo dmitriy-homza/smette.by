@@ -382,8 +382,78 @@ footer {
   }
 }
 
+.info {
+  background-image: url("../images/trash-bg.jpg");
+  width: 100%;
+  .wrapper {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0px 0px 125px;
+    h2 {
+      max-width: 945px;
+      width: 100%;
+      text-align: left;
+      color: $yellow-primary;
+      margin: 55px 0px 40px;
+    }
+    .table-wrapper {
+      background-color: white;
+      border-radius: 0.625rem;
+      padding: 30px 0px 30px 0px;
+      table {
+        font-family: "Pragmatica", sans-serif;
+        font-size: 24px;
+        thead {
+          tr:last-child {
+            font-size: 1.125rem;
+            text-align: center;
+            th {
+              padding-top: 8px;
+            }
+          }
+          th:first-child {
+            padding-left: 30px;
+          }
+          th:last-child {
+            padding-right: 30px;
+          }
+        }
+        tbody {
+          font-weight: 200;
+          tr {
+            transition: 0.2s;
+            &:hover {
+              color: white;
+              background-color: $yellow-primary;
+              transition: 0.2s;
+            }
+            td {
+              padding: 11px 0px;
+            }
+          }
+          td:first-child {
+            width: 14.375rem;
+            padding-left: 30px;
+          }
+          td:last-child {
+            padding-right: 30px;
+          }
+          td:nth-child(2) {
+            width: 25.625rem;
+            padding-right: 4.375rem;
+            text-align: center;
+          }
+          td:nth-child(n + 2) {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1370px) {
   html {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 }
