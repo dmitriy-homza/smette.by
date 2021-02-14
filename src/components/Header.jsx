@@ -22,6 +22,7 @@ const Header = () => {
           <Navbar className="d-flex w-100 justify-content-between" expand="md">
             <NavbarBrand tag={Link} to="/" className="garamond">
               <img src={logo} alt="Logo" />
+              <span>Smette.by</span>
             </NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
@@ -70,11 +71,11 @@ const Header = () => {
         <div className="wrapper">
           <div>
             <a href="tel:+375445749949">
-              <img className="a1" src={A1} alt="A1" />
+              <img onMouseLeave={() => document.getElementById('a1').classList.remove('active')} onMouseEnter={() => document.getElementById('a1').classList.add('active')} className="a1" id="a1" src={A1} alt="A1" />
               <a href="viber://chat?number=375445749949"><img className="viber" src={viber} alt="Viber" /></a>
               <a href="https://wa.me/+375445749949"><img className="whatsapp" src={whatsapp} alt="Whatsapp" /></a>
               <a href="tg://resolve?domain=+375445749949"><img className="telegram" src={telegram} alt="Telegram" /></a>
-              <span>+375445749949</span>
+              <span onMouseLeave={() => document.getElementById('a1').classList.remove('active')} onMouseEnter={() => document.getElementById('a1').classList.add('active')}>+375445749949</span>
             </a>
           </div>
           <div>

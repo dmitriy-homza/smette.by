@@ -13,6 +13,7 @@ export default function Footer() {
         <Navbar className="d-flex w-100 justify-content-between" expand="md">
           <NavbarBrand tag={Link} to="/" className="garamond">
             <img src={logo} alt="Logo" />
+            <span>Smette.by</span>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse className="justify-content-between" isOpen={isOpen} navbar>

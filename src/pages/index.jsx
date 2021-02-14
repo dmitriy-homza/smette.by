@@ -22,7 +22,7 @@ import gallery5 from '../images/gallery5.png';
 import gallery6 from '../images/gallery6.png';
 
 export default () => {
-  const [phone, setValue] = useState('');
+  const [phone, setValue] = useState('+ 375 ()');
   return (
     <>
       <Layout>
@@ -93,13 +93,18 @@ export default () => {
             <div className="take-number">
               <h2>Заказать обратный звонок</h2>
               <div className="form">
-                <PhoneInput
+                <div className="react-tel-input">
+                  <input type="text" className="form-control" value="+ 375 (__) ___-__-__" />
+                </div>
+                {/* <PhoneInput
+                  defaultMask=" (..) ..-.-..-.."
+                  masks={{ by: '(..) ...-..-..' }}
                   disableSearchIcon
                   className="number-input"
                   disableDropdown
                   country="by"
                   value={phone}
-                />
+                /> */}
                 <input className="submit-button" type="submit" value="Перезвоните мне" />
               </div>
             </div>
@@ -220,13 +225,16 @@ export default () => {
             <div className="take-number">
               <h2>Заказать обратный звонок</h2>
               <div className="form">
-                <PhoneInput
+                <div className="react-tel-input">
+                  <input type="text" className="form-control" value="+ 375 (__) ___-__-__" />
+                </div>
+                {/* <PhoneInput
                   disableSearchIcon
                   className="number-input"
                   disableDropdown
                   country="by"
                   value={phone}
-                />
+                /> */}
                 <input className="submit-button" type="submit" value="Перезвоните мне" />
               </div>
             </div>
@@ -246,13 +254,16 @@ export default () => {
             <div className="take-number">
               <h2>Заказать обратный звонок</h2>
               <div className="form">
-                <PhoneInput
+                <div className="react-tel-input">
+                  <input type="text" className="form-control" value="+ 375 (__) ___-__-__" />
+                </div>
+                {/* <PhoneInput
                   disableSearchIcon
                   className="number-input"
                   disableDropdown
                   country="by"
                   value={phone}
-                />
+                /> */}
                 <input className="submit-button" type="submit" value="Перезвоните мне" />
               </div>
             </div>
@@ -262,59 +273,61 @@ export default () => {
             <div className="contacts-wrapper d-flex justify-content-between">
               <div className="map">
                 <div>
-                  <iframe src="https://yandex.by/map-widget/v1/-/CCUMJORE0D" width="680" height="475" frameBorder="1" allowFullScreen="true" />
+                  <iframe src="https://yandex.by/map-widget/v1/-/CCUMJORE0D" width="680" height="100%" frameBorder="1" allowFullScreen="true" />
                 </div>
               </div>
               <div className="contacts-details">
-                <p>
-                  <span>
-                    Адрес:
-                    {' '}
-                  </span>
-                  г. Минск, Меньковский
-                  тракт, 23, стоянка грузовых
-                  автомобилей  B.S.A.T.
-                </p>
-                <p className="d-flex">
-                  <span>Телефоны:</span>
-                  <ul>
-                    <li>
-                      <a href="tel:+375445749949">+375445749949</a>
-                    </li>
-                    <li><a href="tel:+375333549949">+375333549949</a></li>
-                  </ul>
-                </p>
-                <p className="underlined">
-                  <span>
-                    Электронная почта:
-                    {' '}
-                  </span>
-                  <a href="mailto:tv@smette.by">tv@smette.by</a>
-                </p>
-                <p>
-                  <span>
-                    Образцы документов
-                    для юридических лиц:
-                    {' '}
-                  </span>
-                  <ul>
-                    <li>
-                      - копия свидетельства о
-                      государственной регистрации
-                    </li>
-                    <li>
-                      - договор на оказание
-                      транспортно-экспедиционных
-                      услуг
+                <div className="wrapper">
+                  <p>
+                    <span>
+                      Адрес:
+                      {' '}
+                    </span>
+                    г. Минск, Меньковский
+                    тракт, 23, стоянка грузовых
+                    автомобилей  B.S.A.T.
+                  </p>
+                  <p className="d-flex">
+                    <span>Телефоны:</span>
+                    <ul>
+                      <li>
+                        <a href="tel:+375445749949">+375445749949</a>
+                      </li>
+                      <li><a href="tel:+375333549949">+375333549949</a></li>
+                    </ul>
+                  </p>
+                  <p className="underlined">
+                    <span>
+                      Электронная почта:
+                      {' '}
+                    </span>
+                    <a href="mailto:tv@smette.by">tv@smette.by</a>
+                  </p>
+                  <p>
+                    <span>
+                      Образцы документов для юридических лиц:
+                      {' '}
+                    </span>
+                    <ul>
+                      <li>
+                        - копия свидетельства о
+                        государственной регистрации
+                      </li>
+                      <li>
+                        - договор на оказание
+                        транспортно-экспедиционных
+                        услуг
 
-                    </li>
-                    <li>
-                      - договор на выполнение
-                      погрузочно-разрузочных работ
-                    </li>
+                      </li>
+                      <li>
+                        - договор на выполнение
+                        погрузочно-разрузочных работ
+                      </li>
 
-                  </ul>
-                </p>
+                    </ul>
+                  </p>
+                </div>
+
               </div>
             </div>
 
