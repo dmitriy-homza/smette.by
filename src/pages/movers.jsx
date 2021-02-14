@@ -120,57 +120,6 @@ export default () => {
                                     </tbody>
                                 </table>
                             </div>
-
-                        </div>
-                    </section>
-                    <section className="services">
-                        <h2>Услуги и стоимость</h2>
-                        <div className="service-cards-wrapper d-flex flex-wrap">
-                            <div className="service-card col-4">
-                                <h3>Вывоз мусора</h3>
-                                <div className="card-img img1">
-                                    <a href="/">Подробная стоимость</a>
-                                </div>
-                            </div>
-                            <div className="service-card col-4">
-                                <h3>Аренда контейнеров</h3>
-                                <div className="card-img img2">
-                                    <a href="/">Подробная стоимость</a>
-                                </div>
-                            </div>
-                            <div className="service-card col-4">
-                                <h3>Уборка и вывоз снега</h3>
-                                <div className="card-img img3">
-                                    <a href="/">Подробная стоимость</a>
-                                </div>
-                            </div>
-                            <div className="service-card col-4">
-                                <h3>Грузоперевозки</h3>
-                                <div className="card-img img4">
-                                    <a href="/">Подробная стоимость</a>
-                                </div>
-                            </div>
-                            <div className="service-card col-4">
-                                <h3>Продажа контейнеров ТБО</h3>
-                                <div className="card-img img5">
-                                    <a href="/">Подробная стоимость</a>
-                                </div>
-                            </div>
-                            <div className="service-card col-4">
-                                <h3>Услуги грузчиков</h3>
-                                <div className="card-img img6">
-                                    <a tag={Link} to="/movers">Подробная стоимость</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="take-number">
-                            <h2>Заказать обратный звонок</h2>
-                            <div className="form">
-                                <div className="react-tel-input">
-                                    <input type="text" className="form-control" value="+ 375 (__) ___-__-__" />
-                                </div>
-                                <input className="submit-button" type="submit" value="Перезвоните мне" />
-                            </div>
                         </div>
                     </section>
                     <section className="auto">
