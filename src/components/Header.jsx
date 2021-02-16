@@ -34,10 +34,10 @@ const Header = () => {
                   <DropdownMenu>
                     <DropdownItem>Вывоз мусора</DropdownItem>
                     <DropdownItem>Аренда контейнеров</DropdownItem>
-                    <DropdownItem tag={Link} to="/transportation">Грузоперевозки</DropdownItem>
-                    <DropdownItem tag={Link} to="/movers">Услуги грузчиков</DropdownItem>
+                    <DropdownItem><Link to="/transportation">Грузоперевозки</Link></DropdownItem>
+                    <DropdownItem><Link to="/movers">Услуги грузчиков</Link></DropdownItem>
                     <DropdownItem>Продажа контейнеров ТБО</DropdownItem>
-                    <DropdownItem>Уборка и вывоз снега</DropdownItem>
+                    <DropdownItem><Link to="/snow">Уборка и вывоз снега</Link></DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
                 <NavItem>

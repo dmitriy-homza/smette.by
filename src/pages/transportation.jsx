@@ -11,8 +11,6 @@ import PhoneInput from 'react-phone-input-2';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import '../styles/index.scss';
-import carImg from '../images/car.png';
-import line from '../images/line.png';
 import 'react-phone-input-2/lib/style.css';
 import auto1 from '../images/auto1.png';
 import auto2 from '../images/auto2.png';
@@ -34,10 +32,11 @@ export default () => {
                 <main className="custom-page">
                     <section className="info transportation">
                         <div className="wrapper">
-                            <h2>
-                                Подробная стоимость услуг грузчиков
+                            <h1>
+                                Подробная стоимость грузоперевозок
+<br />
                                 для физических лиц
-                            </h2>
+                            </h1>
                             <div className="table-wrapper">
                                 <table>
                                     <thead>
@@ -47,7 +46,7 @@ export default () => {
                                                 длина кузова
                                             </th>
                                             <th colSpan="4">
-                                                Стоимость вывоза мусора для физических лиц за рейс
+                                                Стоимость грузоперевозок для физических лиц за рейс
                                             </th>
                                         </tr>
                                         <tr>
@@ -78,7 +77,11 @@ export default () => {
                                             <td>1 руб. / км</td>
                                         </tr>
                                         <tr>
-                                            <td> 5 т / 32 м3 / 6 м</td>
+                                            <td>
+                                                5 т / 32 м3 / 6 м
+<br />
+за 3 часа
+</td>
                                             <td>
                                                 120 руб./
 <br />
@@ -97,7 +100,11 @@ export default () => {
                                             <td>1,5 руб. / км</td>
                                         </tr>
                                         <tr>
-                                            <td>5 т / 18 м3  / 4.2 м</td>
+                                            <td>
+                                                5 т / 18 м3  / 4.2 м
+<br />
+за 4 часа
+</td>
                                             <td>
                                                 150 руб./
 <br />

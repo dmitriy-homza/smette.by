@@ -405,7 +405,9 @@ footer {
       background-color: white;
       border-radius: 10px;
       padding: 1.875rem 0rem 1.875rem 0rem;
+      width: 71.25rem;
       table {
+        width: 100%;
         font-family: "Pragmatica", sans-serif;
         font-size: 1.5rem;
         thead {
@@ -435,7 +437,7 @@ footer {
               transition: 0.2s;
             }
             td {
-              padding: 0.6875rem 0rem;
+              padding: 1.2875rem 0rem;
             }
           }
           td:first-child {
@@ -443,7 +445,7 @@ footer {
             padding-left: 1.875rem;
           }
           td:last-child {
-            width: 15.9375rem;
+            width: 18.9375rem;
             padding-right: 1.875rem;
           }
           td:nth-child(2) {
@@ -468,7 +470,8 @@ footer {
       p {
         font-weight: 400;
         font-size: 1.5rem;
-        margin-bottom: 1.875rem;
+        margin-bottom: 1.275rem;
+        line-height: 1.625rem;
       }
       p:last-child {
         margin-bottom: 0rem;
@@ -528,6 +531,16 @@ footer {
 }
 
 .custom-page {
+  h1,
+  h2 {
+    max-width: 65rem;
+    width: 100%;
+    text-align: left;
+    color: $yellow-primary;
+    margin: 3.4375rem 0rem 2.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+  }
   .auto {
     background-image: unset;
     h2 {

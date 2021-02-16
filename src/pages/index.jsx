@@ -56,25 +56,25 @@ export default () => {
               <div className="service-card col-4">
                 <h3>Вывоз мусора</h3>
                 <div className="card-img img1">
-                  <a href="/">Подробная стоимость</a>
+                  <Link to="/">Подробная стоимость</Link>
                 </div>
               </div>
               <div className="service-card col-4">
                 <h3>Аренда контейнеров</h3>
                 <div className="card-img img2">
-                  <a href="/">Подробная стоимость</a>
+                  <Link to="/">Подробная стоимость</Link>
                 </div>
               </div>
               <div className="service-card col-4">
                 <h3>Уборка и вывоз снега</h3>
                 <div className="card-img img3">
-                  <a href="/">Подробная стоимость</a>
+                  <Link to="/snow">Подробная стоимость</Link>
                 </div>
               </div>
               <div className="service-card col-4">
                 <h3>Грузоперевозки</h3>
                 <div className="card-img img4">
-                  <a href="/">Подробная стоимость</a>
+                  <Link to="/transportation">Подробная стоимость</Link>
                 </div>
               </div>
               <div className="service-card col-4">
@@ -86,7 +86,7 @@ export default () => {
               <div className="service-card col-4">
                 <h3>Услуги грузчиков</h3>
                 <div className="card-img img6">
-                  <a tag={Link} to="/movers">Подробная стоимость</a>
+                  <Link to="/movers">Подробная стоимость</Link>
                 </div>
               </div>
             </div>
