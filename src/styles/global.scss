@@ -70,7 +70,7 @@ html {
   &:hover {
     img {
       transition: 0.3s;
-      box-shadow: 0 0 3px 1px #ff0000;
+      box-shadow: 0 0 0.1875rem 0.0625rem #ff0000;
     }
   }
 }
@@ -186,6 +186,11 @@ header {
             transition: 0.3s;
             color: $yellow-primary;
             background-color: #272727;
+          }
+          a:focus,
+          button:focus {
+            border: 0px;
+            outline: 0px;
           }
         }
         ul {
@@ -386,36 +391,38 @@ footer {
   background-image: url("../images/trash-bg.jpg");
   width: 100%;
   .wrapper {
-    max-width: 1140px;
+    max-width: 72.8375rem;
     width: 100%;
-    padding: 0px 0px 125px;
+    padding: 0rem 0rem 7.625rem;
     h2 {
-      max-width: 945px;
+      max-width: 60.0625rem;
       width: 100%;
       text-align: left;
       color: $yellow-primary;
-      margin: 55px 0px 40px;
+      margin: 3.4375rem 0rem 2.5rem;
     }
     .table-wrapper {
       background-color: white;
-      border-radius: 0.625rem;
-      padding: 30px 0px 30px 0px;
+      border-radius: 10px;
+      padding: 1.875rem 0rem 1.875rem 0rem;
       table {
         font-family: "Pragmatica", sans-serif;
-        font-size: 24px;
+        font-size: 1.5rem;
         thead {
           tr:last-child {
             font-size: 1.125rem;
             text-align: center;
             th {
-              padding-top: 8px;
+              padding-top: 0.5rem;
             }
           }
-          th:first-child {
-            padding-left: 30px;
+          tr:first-child {
+            th:first-child {
+              padding-left: 1.875rem;
+            }
           }
           th:last-child {
-            padding-right: 30px;
+            padding-right: 1.875rem;
           }
         }
         tbody {
@@ -428,15 +435,16 @@ footer {
               transition: 0.2s;
             }
             td {
-              padding: 11px 0px;
+              padding: 0.6875rem 0rem;
             }
           }
           td:first-child {
             width: 14.375rem;
-            padding-left: 30px;
+            padding-left: 1.875rem;
           }
           td:last-child {
-            padding-right: 30px;
+            width: 15.9375rem;
+            padding-right: 1.875rem;
           }
           td:nth-child(2) {
             width: 25.625rem;
@@ -449,11 +457,151 @@ footer {
         }
       }
     }
+    .table-details {
+      margin-top: 3.125rem;
+      padding: 0rem 1.875rem;
+      h4 {
+        font-family: Pragmatica, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      p {
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin-bottom: 1.875rem;
+      }
+      p:last-child {
+        margin-bottom: 0rem;
+      }
+      .two-columns {
+        display: flex;
+        div {
+          p:first-child {
+            margin-bottom: 0rem;
+          }
+        }
+        p:first-child {
+          flex: 36%;
+        }
+      }
+    }
+    .info-details {
+      margin-top: 2.1875rem;
+      width: 100%;
+      p {
+        font-family: "Pragmatica", sans-serif;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 400;
+        span {
+          color: $yellow-primary;
+          font-size: 2.25rem;
+          transition: 0.3s;
+          &:hover {
+            text-decoration: underline;
+            text-shadow: 0 0 0.5625rem $yellow-primary;
+            transition: 0.3s;
+          }
+          a {
+            color: $yellow-primary;
+          }
+        }
+      }
+    }
+    .take-number {
+      bottom: 0rem;
+      h2 {
+        color: $yellow-primary;
+        text-align: center;
+        font-size: 2.25rem;
+      }
+      input {
+        background-color: unset;
+        &:hover,
+        &:focus {
+          box-shadow: 0 0 0.5rem 0rem #ffffffa9;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.custom-page {
+  .auto {
+    background-image: unset;
+    h2 {
+      color: black;
+    }
+    .auto-wrapper {
+      .card {
+        border: 0px;
+        box-shadow: 0.25rem 0.25rem 0.625rem rgb(0 0 0 / 25%);
+      }
+    }
+    .auto-details {
+      p {
+        color: black;
+        padding-bottom: 0rem;
+      }
+    }
+    .take-number {
+      bottom: 1.25rem;
+    }
+  }
+  .our-works {
+    height: auto;
+    width: 100%;
+    background-image: url("../images/trash-bg.jpg");
+    background-position-y: 52%;
+    h2 {
+      color: $yellow-primary;
+    }
+    padding-bottom: 1.875rem;
+  }
+  .transportation {
+    .table-wrapper {
+      table {
+        th:nth-child(2) {
+          text-align: center;
+        }
+        tbody {
+          tr {
+            td:first-child {
+              width: 18.25rem;
+              padding-left: 1.875rem;
+            }
+            td:last-child {
+              padding-right: 1.875rem;
+            }
+            td:nth-child(2) {
+              width: 10.6875rem;
+              text-align: center;
+              padding-right: 0rem;
+            }
+            td:nth-child(n + 2) {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .wrapper {
+      .table-details {
+        margin-top: 2.125rem;
+        h4 {
+          margin-bottom: 1.5rem;
+        }
+        p {
+          margin-bottom: 0.875rem;
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 1370px) {
   html {
-    font-size: 0.8125rem;
+    font-size: 13px;
   }
 }
