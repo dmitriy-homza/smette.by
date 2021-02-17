@@ -7,6 +7,7 @@
 /* eslint-disable react/style-prop-object */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import PhoneInput from 'react-phone-input-2';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
@@ -31,6 +32,10 @@ export default () => {
     return (
         <>
             <Layout>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Услуги грузчиков - Смецце</title>
+                </Helmet>
                 <main className="custom-page">
                     <section className="info">
                         <div className="wrapper">
@@ -65,55 +70,83 @@ export default () => {
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>500 кг / 1 м3</td>
+                                            <td>
+                                                500 кг / 1 м
+<sup>3</sup>
+                                            </td>
                                             <td>10-15 мешков</td>
                                             <td>15 руб.</td>
                                             <td>30 руб.</td>
                                         </tr>
                                         <tr>
-                                            <td> 1 т / 5 м3</td>
+                                            <td>
+                                                {' '}
+1 т / 5 м
+<sup>3</sup>
+                                            </td>
                                             <td>25-30 мешков</td>
                                             <td>25 руб.</td>
                                             <td>30 руб.</td>
                                         </tr>
                                         <tr>
-                                            <td>2 т / 10 м3</td>
+                                            <td>
+                                                2 т / 10 м
+<sup>3</sup>
+                                            </td>
                                             <td>50-60 мешков</td>
                                             <td>40 руб.</td>
                                             <td>60 руб.</td>
                                         </tr>
                                         <tr>
-                                            <td>3 т / 15 м3</td>
+                                            <td>
+                                                3 т / 15 м
+<sup>3</sup>
+                                            </td>
                                             <td>70-80 мешков</td>
                                             <td />
                                             <td>80 руб.</td>
                                         </tr>
                                         <tr>
-                                            <td>4 т / 20 м3</td>
+                                            <td>
+                                                4 т / 20 м
+<sup>3</sup>
+                                            </td>
                                             <td>90-100 мешков</td>
                                             <td />
                                             <td>110 руб.</td>
                                         </tr>
                                         <tr>
-                                            <td>5 т / 32 м3</td>
+                                            <td>
+                                                5 т / 32 м
+<sup>3</sup>
+                                            </td>
                                             <td>100-150 мешков</td>
                                             <td />
                                             <td>120 руб.</td>
                                         </tr>
                                         <tr>
-                                            <td>10 т / 8 м3</td>
+                                            <td>
+                                                10 т / 8 м
+<sup>3</sup>
+                                            </td>
                                             <td>150-160 мешков</td>
                                             <td />
                                             <td>130 руб.</td>
                                         </tr>
                                         <tr>
-                                            <td>10 т / 12 м3</td>
+                                            <td>
+                                                10 т / 12 м
+<sup>3</sup>
+                                            </td>
                                             <td>180-200 мешков</td>
                                             <td />
                                             <td>160 руб.</td>
                                         </tr>
                                         <tr>
-                                            <td>10 т / 14 м3</td>
+                                            <td>
+                                                10 т / 14 м
+<sup>3</sup>
+                                            </td>
                                             <td>200-250 мешков</td>
                                             <td />
                                             <td>160 руб.</td>
@@ -171,7 +204,10 @@ export default () => {
                                 <img src={auto1} alt="Авто 1" />
                                 <ul>
                                     <li>Грузоподъёмность до 3 т</li>
-                                    <li>Объём до 18 м3</li>
+                                    <li>
+                                        Объём до 18 м
+<sup>3</sup>
+                                    </li>
                                     <li>
                                         Стоимость - 170 руб.
                                     </li>
@@ -186,7 +222,10 @@ export default () => {
                                 <img src={auto2} alt="Авто 2" />
                                 <ul>
                                     <li>Грузоподъёмность до 5 т</li>
-                                    <li>Объём до 32 м3</li>
+                                    <li>
+                                        Объём до 32 м
+<sup>3</sup>
+                                    </li>
                                     <li>
                                         Стоимость - 230 руб.
                                     </li>
@@ -201,7 +240,10 @@ export default () => {
                                 <img src={auto3} alt="Авто 3" />
                                 <ul>
                                     <li>Грузоподъёмность до 10 т</li>
-                                    <li>Объём до 8 / 12 / 14 м3</li>
+                                    <li>
+                                        Объём до 8 / 12 / 14 м
+<sup>3</sup>
+                                    </li>
                                     <li>
                                         Стоимость - 180 / 200 / 220 руб.
                                     </li>
@@ -216,7 +258,10 @@ export default () => {
                                 <img src={auto4} alt="Авто 4" />
                                 <ul>
                                     <li>Грузоподъёмность до 20 т</li>
-                                    <li>Объём до 12 / 16 м3</li>
+                                    <li>
+                                        Объём до 12 / 16 м
+<sup>3</sup>
+                                    </li>
                                     <li>
                                         Стоимость - 250 / 350 руб.
                                     </li>
@@ -232,7 +277,10 @@ export default () => {
                                 <img src={auto5} alt="Авто 5" />
                                 <ul>
                                     <li>Грузоподъёмность до 10 т</li>
-                                    <li>Объём до 8 / 12 м3</li>
+                                    <li>
+                                        Объём до 8 / 12 м
+<sup>3</sup>
+                                    </li>
                                     <li>
                                         Стоимость - 230/250 руб. за 5 дней,
                                         при аренде свыше 5 дней

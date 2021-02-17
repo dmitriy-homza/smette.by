@@ -2,6 +2,7 @@
 /* eslint-disable react/style-prop-object */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import PhoneInput from 'react-phone-input-2';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
@@ -25,6 +26,10 @@ export default () => {
   const [phone, setValue] = useState('+ 375 ()');
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Смецце - грузоперевозки, аренда и реализация контейнеров, услуги грузчиков</title>
+      </Helmet>
       <Layout>
         <main>
           <section className="hello">
@@ -56,13 +61,13 @@ export default () => {
               <div className="service-card col-4">
                 <h3>Вывоз мусора</h3>
                 <div className="card-img img1">
-                  <Link to="/">Подробная стоимость</Link>
+                  <Link to="/trash">Подробная стоимость</Link>
                 </div>
               </div>
               <div className="service-card col-4">
                 <h3>Аренда контейнеров</h3>
                 <div className="card-img img2">
-                  <Link to="/">Подробная стоимость</Link>
+                  <Link to="/rent">Подробная стоимость</Link>
                 </div>
               </div>
               <div className="service-card col-4">
@@ -80,7 +85,7 @@ export default () => {
               <div className="service-card col-4">
                 <h3>Продажа контейнеров ТБО</h3>
                 <div className="card-img img5">
-                  <a href="/">Подробная стоимость</a>
+                  <Link to="/container">Подробная стоимость</Link>
                 </div>
               </div>
               <div className="service-card col-4">
@@ -117,7 +122,10 @@ export default () => {
                 <img src={auto1} alt="Авто 1" />
                 <ul>
                   <li>Грузоподъёмность до 3 т</li>
-                  <li>Объём до 18 м3</li>
+                  <li>
+                    Объём до 18 м
+                    <sup>3</sup>
+                  </li>
                   <li>
                     Стоимость - 170 руб.
                   </li>
@@ -132,7 +140,10 @@ export default () => {
                 <img src={auto2} alt="Авто 2" />
                 <ul>
                   <li>Грузоподъёмность до 5 т</li>
-                  <li>Объём до 32 м3</li>
+                  <li>
+                    Объём до 32 м
+                    <sup>3</sup>
+                  </li>
                   <li>
                     Стоимость - 230 руб.
                   </li>
@@ -147,7 +158,10 @@ export default () => {
                 <img src={auto3} alt="Авто 3" />
                 <ul>
                   <li>Грузоподъёмность до 10 т</li>
-                  <li>Объём до 8 / 12 / 14 м3</li>
+                  <li>
+                    Объём до 8 / 12 / 14 м
+                    <sup>3</sup>
+                  </li>
                   <li>
                     Стоимость - 180 / 200 / 220 руб.
                   </li>
@@ -162,7 +176,10 @@ export default () => {
                 <img src={auto4} alt="Авто 4" />
                 <ul>
                   <li>Грузоподъёмность до 20 т</li>
-                  <li>Объём до 12 / 16 м3</li>
+                  <li>
+                    Объём до 12 / 16 м
+                    <sup>3</sup>
+                  </li>
                   <li>
                     Стоимость - 250 / 350 руб.
                   </li>
@@ -178,7 +195,10 @@ export default () => {
                 <img src={auto5} alt="Авто 5" />
                 <ul>
                   <li>Грузоподъёмность до 10 т</li>
-                  <li>Объём до 8 / 12 м3</li>
+                  <li>
+                    Объём до 8 / 12 м
+                    <sup>3</sup>
+                  </li>
                   <li>
                     Стоимость - 230/250 руб. за 5 дней,
                     при аренде свыше 5 дней

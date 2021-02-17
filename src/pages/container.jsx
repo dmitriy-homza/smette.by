@@ -24,6 +24,11 @@ import gallery3 from '../images/gallery3.png';
 import gallery4 from '../images/gallery4.png';
 import gallery5 from '../images/gallery5.png';
 import gallery6 from '../images/gallery6.png';
+import container1 from '../images/container1.png';
+import container2 from '../images/container2.png';
+import container3 from '../images/container3.png';
+import container4 from '../images/container4.png';
+import container5 from '../images/container5.png';
 
 export default () => {
     const [phone, setValue] = useState('+ 375 ()');
@@ -31,143 +36,112 @@ export default () => {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>грузоперевозки - Смецце</title>
+                <title>Контейнеры для ТБО - Смецце</title>
             </Helmet>
             <Layout>
-                <main className="custom-page">
-                    <section className="info transportation">
-                        <div className="wrapper">
-                            <h1>
-                                Подробная стоимость грузоперевозок
-<br />
-                                для физических лиц
-                            </h1>
-                            <div className="table-wrapper">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th rowSpan="2">
-                                                Вес / объём груза /
-                                                длина кузова
-                                            </th>
-                                            <th colSpan="4">
-                                                Стоимость грузоперевозок для физических лиц за рейс
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <th>без грузчиков</th>
-                                            <th>с 1-м грузчиком</th>
-                                            <th>с 2-мя грузчиками</th>
-                                            <th>тариф при выезде за МКАД</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                3 т / 18 м
-<sup>3</sup>
-                                                {' '}
-/ 4.2 м
-</td>
-                                            <td>
-                                                40 руб./
-<br />
-за 2 часа
-</td>
-                                            <td>
-                                                60 руб./
-<br />
-за 2 часа
-</td>
-                                            <td>
-                                                80 руб./
-<br />
-                                                за 2 часа
-</td>
-                                            <td>1 руб. / км</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                5 т / 32 м
-<sup>3</sup>
-/ 6 м
-<br />
-за 3 часа
-</td>
-                                            <td>
-                                                120 руб./
-<br />
-за 3 часа
-</td>
-                                            <td>
-                                                150 руб./
-<br />
-за 3 часа
-</td>
-                                            <td>
-                                                180 руб./
-<br />
-                                                за 3 часа
-</td>
-                                            <td>1,5 руб. / км</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                5 т / 18 м
-<sup>3</sup>
-                                                {' '}
-/ 4.2 м
-<br />
-за 4 часа
-</td>
-                                            <td>
-                                                150 руб./
-<br />
-за 4 часа
-</td>
-                                            <td>
-                                                180 руб./
-<br />
-за 4 часа
-</td>
-                                            <td>
-                                                210 руб./
-<br />
-                                                за 4 часа
-</td>
-                                            <td>1,5 руб. / км</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div className="table-details">
-                                    <h4>Дополнительная информация:</h4>
-                                    <p>
-                                        Время загрузки - 2 часа
-                                    </p>
-                                    <p>
-                                        Дополнительное время загрузки: транспорт - 30-60 руб./ час,
-<br />
-услуги грузчика - 8-40 руб./ час в зависимости от сложности работ
-</p>
-                                    <p>Сбор мусора - 1 мешок - 1 рубль</p>
-                                </div>
+                <main className="custom-page nav-page">
+                    <section className="auto containers info">
+                        <h1>Контейнеры для ТБО</h1>
+                        <div className="auto-wrapper w-100 flex-wrap">
+                            <div className="card">
+                                <h3>Контейнер 120 л</h3>
+                                <img src={container1} alt="Авто 1" />
+                                <ul>
+                                    <li>Стоимость - 90 руб.</li>
+                                    <li>
+                                        Грузоподъёмность до 48 кг
+                                    </li>
+                                    <li>
+                                        Размеры  - 555*480*937 мм
+                                    </li>
+                                    <li>
+                                        Вес - 8 кг
+                                    </li>
+                                    <li>Производство - Россия</li>
+                                </ul>
                             </div>
-                            <div className="info-details">
-                                <p>Для юридических лиц стоимость при безналичном расчете увеличивается на 10 - 20%</p>
-                                <p>
-                                    Коммерческие предложения просим высылать на электронную почту -
-                  {' '}
-                                    <span><a href="mailto:tv@smette.by">tv@smette.by</a></span>
-                                </p>
+                            <div className="card">
+                                <h3>Контейнер 240 л</h3>
+                                <img src={container2} alt="Авто 2" />
+                                <ul>
+                                    <li>Стоимость -  110 руб.</li>
+                                    <li>
+                                        Грузоподъёмность до 96 кг
+                                    </li>
+                                    <li>
+                                        Размеры  - 580*730*1060 мм
+                                    </li>
+                                    <li>
+                                        Вес - 13,2 кг
+                                    </li>
+                                    <li>Производство - Россия</li>
+                                </ul>
                             </div>
-                            <div className="take-number">
-                                <h2>Заказать обратный звонок</h2>
-                                <div className="form">
-                                    <div className="react-tel-input">
-                                        <input type="text" className="form-control" value="+ 375 (__) ___-__-__" />
-                                    </div>
-                                    <input className="submit-button" type="submit" value="Перезвоните мне" />
+                            <div className="card">
+                                <h3>Контейнер 360 л</h3>
+                                <img src={container3} alt="Авто 3" />
+                                <ul>
+                                    <li>Стоимость - 195 руб.</li>
+                                    <li>
+                                        Грузоподъёмность до 170 кг
+                                    </li>
+                                    <li>
+                                        Размеры  - 575*575*1020 мм
+                                    </li>
+                                    <li>
+                                        Вес - 16,2 кг
+                                    </li>
+                                    <li>Производство - Россия</li>
+                                </ul>
+                            </div>
+                            <div className="card">
+                                <h3>Контейнер 660 л</h3>
+                                <img src={container4} alt="Авто 4" />
+                                <ul>
+                                    <li>Стоимость - 450 руб.</li>
+                                    <li>
+                                        Грузоподъёмность до 510 кг
+                                    </li>
+                                    <li>
+                                        Размеры  - 780*1370*1218 мм
+                                    </li>
+                                    <li>
+                                        Вес - 42,6 кг
+                                    </li>
+                                    <li>Производство - Россия</li>
+                                </ul>
+                            </div>
+                            <div className="card">
+                                <h3>Контейнер 1100 л</h3>
+                                <img src={container5} alt="Авто 5" />
+                                <ul>
+                                    <li>Стоимость - 500 руб.</li>
+                                    <li>
+                                        Грузоподъёмность до 510 кг
+                                    </li>
+                                    <li>
+                                        Размеры  - 1377*1077*1369 мм
+                    </li>
+                                    <li>Вес - 51 кг</li>
+                                    <li>Производство - Россия</li>
+                                </ul>
+                            </div>
+                            <div className="card additionals">
+                                <h3>Дополнительная информация</h3>
+                                <ul>
+                                    <li>Продажа контейнеров для ТБО физическим и юридическим лицам осуществляется по предоплате в размере минимум 20% от стоимости заказа</li>
+                                    <li>Возможна бесплатная аренда контейнера при условии заключения договора на вывоз мусора</li>
+                                    <li>Возможны различные цвета контейнеров</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="take-number">
+                            <h2>Заказать обратный звонок</h2>
+                            <div className="form">
+                                <div className="react-tel-input">
+                                    <input type="text" className="form-control" value="+ 375 (__) ___-__-__" />
                                 </div>
+                                <input className="submit-button" type="submit" value="Перезвоните мне" />
                             </div>
                         </div>
                     </section>

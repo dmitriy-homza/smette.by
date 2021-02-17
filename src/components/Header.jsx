@@ -32,11 +32,11 @@ const Header = () => {
                     Услуги и стоимость
                   </DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem>Вывоз мусора</DropdownItem>
-                    <DropdownItem>Аренда контейнеров</DropdownItem>
+                    <DropdownItem><Link to="/trash">Вывоз мусора</Link></DropdownItem>
+                    <DropdownItem><Link to="/rent">Аренда контейнеров</Link></DropdownItem>
                     <DropdownItem><Link to="/transportation">Грузоперевозки</Link></DropdownItem>
                     <DropdownItem><Link to="/movers">Услуги грузчиков</Link></DropdownItem>
-                    <DropdownItem>Продажа контейнеров ТБО</DropdownItem>
+                    <DropdownItem><Link to="/container">Продажа контейнеров ТБО</Link></DropdownItem>
                     <DropdownItem><Link to="/snow">Уборка и вывоз снега</Link></DropdownItem>
                   </DropdownMenu>
                 </Dropdown>

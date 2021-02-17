@@ -3,7 +3,8 @@ module.exports = {
     title: 'smette.by',
     siteUrl: 'https://smette.onagracija.by/',
   },
-  plugins: ['gatsby-plugin-sitemap',
+  plugins: [
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-firebase',
       options: {

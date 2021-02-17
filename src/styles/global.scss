@@ -174,6 +174,13 @@ header {
           background-color: #191919;
           color: #f7f5f5;
           animation: opacity 0.3s;
+          .dropdown-item {
+            padding: 0px;
+          }
+          a {
+            padding: 0.25rem 1.5rem;
+            display: flex;
+          }
           button,
           a {
             font-size: 1.125rem;
@@ -389,7 +396,9 @@ footer {
 
 .info {
   background-image: url("../images/trash-bg.jpg");
+  background-repeat: no-repeat;
   width: 100%;
+  background-size: cover;
   .wrapper {
     max-width: 72.8375rem;
     width: 100%;
@@ -405,7 +414,7 @@ footer {
       background-color: white;
       border-radius: 10px;
       padding: 1.875rem 0rem 1.875rem 0rem;
-      width: 71.25rem;
+      width: 73.25rem;
       table {
         width: 100%;
         font-family: "Pragmatica", sans-serif;
@@ -478,13 +487,14 @@ footer {
       }
       .two-columns {
         display: flex;
+        margin-bottom: 1.2rem;
         div {
           p:first-child {
             margin-bottom: 0rem;
           }
         }
         p:first-child {
-          flex: 36%;
+          flex: 36% 0;
         }
       }
     }
@@ -535,11 +545,16 @@ footer {
   h2 {
     max-width: 65rem;
     width: 100%;
-    text-align: left;
     color: $yellow-primary;
-    margin: 3.4375rem 0rem 2.5rem;
+    margin: 3.4375rem auto 2.5rem;
     font-size: 3rem;
     font-weight: 600;
+    font-family: "Pragmatica", sans-serif;
+  }
+  .contacts {
+    h2 {
+      color: black;
+    }
   }
   .auto {
     background-image: unset;
@@ -609,6 +624,41 @@ footer {
           margin-bottom: 0.875rem;
         }
       }
+    }
+  }
+  .containers {
+    background-image: url("../images/trash-bg.jpg");
+    background-position-y: 52%;
+    height: 89.6875rem !important;
+    h1 {
+      color: $yellow-primary;
+      text-align: center;
+    }
+    .card {
+      img {
+        width: fit-content;
+        height: auto !important;
+        align-self: center;
+      }
+    }
+    .additionals {
+      ul {
+        li {
+          margin-bottom: 1.5625rem !important;
+        }
+      }
+    }
+  }
+}
+
+.nav-page {
+  h1,
+  h2 {
+    text-align: center;
+  }
+  .contacts {
+    h1 {
+      color: black;
     }
   }
 }

@@ -7,6 +7,7 @@
 /* eslint-disable react/style-prop-object */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import PhoneInput from 'react-phone-input-2';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
@@ -29,6 +30,10 @@ export default () => {
     return (
         <>
             <Layout>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Вывоз снега - Смецце</title>
+                </Helmet>
                 <main className="custom-page">
                     <section className="info transportation">
                         <div className="wrapper">
@@ -59,7 +64,10 @@ export default () => {
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>10 т / 8 м3</td>
+                                            <td>
+                                                10 т / 8 м
+<sup>3</sup>
+                                            </td>
                                             <td>
                                                 180 руб.
 </td>
@@ -73,8 +81,9 @@ export default () => {
                                         </tr>
                                         <tr>
                                             <td>
-                                                10 т / 12 м3
-</td>
+                                                10 т / 12 м
+<sup>3</sup>
+                                            </td>
                                             <td>
                                                 200 руб.
 </td>
@@ -88,8 +97,9 @@ export default () => {
                                         </tr>
                                         <tr>
                                             <td>
-                                                10 т / 14 м3
-</td>
+                                                10 т / 14 м
+<sup>3</sup>
+                                            </td>
                                             <td>
                                                 220 руб.
 </td>
@@ -104,8 +114,9 @@ export default () => {
                                         {' '}
                                         <tr>
                                             <td>
-                                                20 т / 12 м3
-</td>
+                                                20 т / 12 м
+<sup>3</sup>
+                                            </td>
                                             <td>
                                                 250 руб.
 </td>
@@ -120,8 +131,9 @@ export default () => {
                                         {' '}
                                         <tr>
                                             <td>
-                                                20 т / 16 м3
-</td>
+                                                20 т / 16 м
+<sup>3</sup>
+                                            </td>
                                             <td>
                                                 350 руб.
 </td>
@@ -174,7 +186,10 @@ export default () => {
                                 <img src={auto1} alt="Авто 1" />
                                 <ul>
                                     <li>Грузоподъёмность до 3 т</li>
-                                    <li>Объём до 18 м3</li>
+                                    <li>
+                                        Объём до 18 м
+<sup>3</sup>
+                                    </li>
                                     <li>
                                         Стоимость - 170 руб.
                                     </li>
@@ -189,7 +204,10 @@ export default () => {
                                 <img src={auto2} alt="Авто 2" />
                                 <ul>
                                     <li>Грузоподъёмность до 5 т</li>
-                                    <li>Объём до 32 м3</li>
+                                    <li>
+                                        Объём до 32 м
+<sup>3</sup>
+                                    </li>
                                     <li>
                                         Стоимость - 230 руб.
                                     </li>
@@ -204,7 +222,10 @@ export default () => {
                                 <img src={auto3} alt="Авто 3" />
                                 <ul>
                                     <li>Грузоподъёмность до 10 т</li>
-                                    <li>Объём до 8 / 12 / 14 м3</li>
+                                    <li>
+                                        Объём до 8 / 12 / 14 м
+<sup>3</sup>
+                                    </li>
                                     <li>
                                         Стоимость - 180 / 200 / 220 руб.
                                     </li>
@@ -219,7 +240,10 @@ export default () => {
                                 <img src={auto4} alt="Авто 4" />
                                 <ul>
                                     <li>Грузоподъёмность до 20 т</li>
-                                    <li>Объём до 12 / 16 м3</li>
+                                    <li>
+                                        Объём до 12 / 16 м
+<sup>3</sup>
+                                    </li>
                                     <li>
                                         Стоимость - 250 / 350 руб.
                                     </li>
@@ -235,7 +259,10 @@ export default () => {
                                 <img src={auto5} alt="Авто 5" />
                                 <ul>
                                     <li>Грузоподъёмность до 10 т</li>
-                                    <li>Объём до 8 / 12 м3</li>
+                                    <li>
+                                        Объём до 8 / 12 м
+<sup>3</sup>
+                                    </li>
                                     <li>
                                         Стоимость - 230/250 руб. за 5 дней,
                                         при аренде свыше 5 дней
