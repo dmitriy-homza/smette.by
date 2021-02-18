@@ -96,5 +96,6 @@ export default function Footer() {
         </Navbar>
       </div>
     </footer>
+
   );
 }

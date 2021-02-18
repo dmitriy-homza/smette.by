@@ -394,6 +394,22 @@ footer {
   }
 }
 
+.form-control {
+  background-image: url('../images/number-bg.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: 35% 53% !important;
+}
+
+.form-control:focus, .form-control:visited {
+  background: unset !important;
+}
+
+.checked {
+  .form-control {
+    background: unset !important;
+  }
+}
+
 .info {
   background-image: url("../images/trash-bg.jpg");
   background-repeat: no-repeat;

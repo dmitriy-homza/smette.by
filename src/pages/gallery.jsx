@@ -10,17 +10,13 @@ import '../styles/index.scss';
 import carImg from '../images/car.png';
 import line from '../images/line.png';
 import 'react-phone-input-2/lib/style.css';
-import auto1 from '../images/auto1.png';
-import auto2 from '../images/auto2.png';
-import auto3 from '../images/auto3.png';
-import auto4 from '../images/auto4.png';
-import auto5 from '../images/auto5.png';
 import gallery1 from '../images/gallery1.png';
 import gallery2 from '../images/gallery2.png';
 import gallery3 from '../images/gallery3.png';
 import gallery4 from '../images/gallery4.png';
 import gallery5 from '../images/gallery5.png';
 import gallery6 from '../images/gallery6.png';
+import TakeNumber from '../components/TakeNumber';
 
 export default () => {
   const [phone, setValue] = useState('+ 375 ()');
@@ -44,22 +40,7 @@ export default () => {
                 <img className="col-4" src={gallery6} alt="Наша работа" />
               </div>
             </div>
-            <div className="take-number">
-              <h2>Заказать обратный звонок</h2>
-              <div className="form">
-                <div className="react-tel-input">
-                  <input type="text" className="form-control" value="+ 375 (__) ___-__-__" />
-                </div>
-                {/* <PhoneInput
-                  disableSearchIcon
-                  className="number-input"
-                  disableDropdown
-                  country="by"
-                  value={phone}
-                /> */}
-                <input className="submit-button" type="submit" value="Перезвоните мне" />
-              </div>
-            </div>
+            <TakeNumber />
           </section>
           <section className="contacts w-100">
             <h2>Контакты</h2>

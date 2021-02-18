@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { Collapse, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem } from 'reactstrap';
+import firebase from 'gatsby-plugin-firebase';
 import logo from '../images/logo.png';
 import mts from '../images/mts.png';
 import A1 from '../images/A1.png';
@@ -15,6 +16,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const analytics = firebase.analytics();
   return (
     <header>
       <div className="wrapper">

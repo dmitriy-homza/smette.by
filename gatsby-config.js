@@ -4,10 +4,22 @@ module.exports = {
     siteUrl: 'https://smette.by/',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          'G-447K5MTQ1F', // Google Analytics / GA
+        ],
+      },
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-firebase',
       options: {
+        features: {
+          analytics: true,
+        },
         credentials: {
           apiKey: 'AIzaSyAVsIPuHiVk5OzKrVF5ynE_4Vjau6WK9sg',
           authDomain: 'smetteby-a53b3.firebaseapp.com',

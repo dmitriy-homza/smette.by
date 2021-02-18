@@ -24,6 +24,7 @@ import gallery3 from '../images/gallery3.png';
 import gallery4 from '../images/gallery4.png';
 import gallery5 from '../images/gallery5.png';
 import gallery6 from '../images/gallery6.png';
+import TakeNumber from '../components/TakeNumber';
 
 export default () => {
     const [phone, setValue] = useState('+ 375 ()');
@@ -262,15 +263,7 @@ export default () => {
                                     <span><a href="mailto:tv@smette.by">tv@smette.by</a></span>
                                 </p>
                             </div>
-                            <div className="take-number">
-                                <h2>Заказать обратный звонок</h2>
-                                <div className="form">
-                                    <div className="react-tel-input">
-                                        <input type="text" className="form-control" value="+ 375 (__) ___-__-__" />
-                                    </div>
-                                    <input className="submit-button" type="submit" value="Перезвоните мне" />
-                                </div>
-                            </div>
+                            <TakeNumber />
                         </div>
                     </section>
                     <section className="auto">
@@ -401,15 +394,7 @@ export default () => {
                                 <span><a href="mailto:tv@smette.by">tv@smette.by</a></span>
                             </p>
                         </div>
-                        <div className="take-number">
-                            <h2>Заказать обратный звонок</h2>
-                            <div className="form">
-                                <div className="react-tel-input">
-                                    <input type="text" className="form-control" value="+ 375 (__) ___-__-__" />
-                                </div>
-                                <input className="submit-button" type="submit" value="Перезвоните мне" />
-                            </div>
-                        </div>
+                        <TakeNumber />
                     </section>
                     <section className="our-works">
                         <div className="gallery">
@@ -423,15 +408,7 @@ export default () => {
                                 <img className="col-4" src={gallery6} alt="Наша работа" />
                             </div>
                         </div>
-                        <div className="take-number">
-                            <h2>Заказать обратный звонок</h2>
-                            <div className="form">
-                                <div className="react-tel-input">
-                                    <input type="text" className="form-control" value="+ 375 (__) ___-__-__" />
-                                </div>
-                                <input className="submit-button" type="submit" value="Перезвоните мне" />
-                            </div>
-                        </div>
+                        <TakeNumber />
                     </section>
                     <section className="contacts w-100">
                         <h2>Контакты</h2>
