@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import { Collapse, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, NavItem } from 'reactstrap';
 import firebase from 'gatsby-plugin-firebase';
@@ -17,9 +18,16 @@ const Header = () => {
   const toggle = () => setIsOpen(!isOpen);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   // eslint-disable-next-line no-unused-vars
-  const analytics = firebase.analytics();
+  useEffect(() => {
+    // eslint-disable-next-line no-unused-vars
+    const analytics = firebase.analytics();
+  });
+
   return (
     <header>
+      <Helmet>
+        <meta name="yandex-verification" content="2fb08ccfb84fb333" />
+      </Helmet>
       <div className="wrapper">
         <div className="navigation-line">
           <Navbar className="d-flex w-100 justify-content-between" expand="md">
