@@ -394,9 +394,25 @@ footer {
   }
 }
 
+.take-number {
+  .valid {
+    .form-control {
+      box-shadow: 0 0 14px 0.01rem #00ff0852 !important;
+      transition: 0.2s !important;
+    }
+  }
+  .invalid {
+    .form-control {
+      box-shadow: 0 0 14px 0.01rem #ff330052 !important;
+      transition: 0.2s !important;
+    }
+  }
+}
+
 .form-control {
   background-image: url('../images/number-bg.png') !important;
   background-repeat: no-repeat !important;
+  transition: 0s !important;
   background-position: 35% 53% !important;
 }
 

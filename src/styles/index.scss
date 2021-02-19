@@ -20,11 +20,19 @@ main {
             font-family: "Pragmatica", sans-serif;
         }
         .form {
-            margin-top: 3.5rem;
-            width: 54.375rem;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            form {
+                margin-top: 0rem;
+                width: 38.3125rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .succes {
+                    color: green;
+                }
+                .error {
+                    color: red;
+                }
+            }
             .submit-button {
                 background-color: $yellow-primary;
                 color: white;
@@ -33,6 +41,12 @@ main {
             }
             .react-tel-input {
                 width: unset;
+                p {
+                    position: absolute;
+                    top: -30px;
+                    width: 100%;
+                    text-align: center;
+                }
                 .form-control {
                     color: $yellow-primary;
                     border: 0.4375rem solid $yellow-primary;
@@ -80,6 +94,11 @@ main {
                 background-color: $yellow-primary;
                 color: white;
                 font-weight: 800;
+                &:active {
+                    background-color: #ff9400 !important;
+                    transition: 0.15s;
+                    transform: scale(1.03);
+                }
             }
             .react-tel-input {
                 width: unset;
@@ -280,11 +299,13 @@ main {
                 color: $yellow-primary;
             }
             .form {
-                margin-top: 2.375rem;
-                width: 38.3125rem;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+                form {
+                    margin-top: 0rem;
+                    width: 38.3125rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
                 .submit-button {
                     background-color: $yellow-primary;
                     color: white;
