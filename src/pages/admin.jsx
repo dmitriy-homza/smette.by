@@ -11,17 +11,20 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import classnames from 'classnames';
 import Layout from '../components/Layout';
 
+require('firebase/auth');
+
 export default () => {
-  const uiConfig = {
-    // Popup signin flow rather than redirect flow.
-    signInFlow: 'popup',
-    signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    ],
-  };
+  const [uiConfig, setUIConfig] = useState(null);
   const [hasAccount, setAccount] = useState(false);
   const [currentUser, setUI] = useState(false);
   useEffect(() => {
+    setUIConfig({
+      // Popup signin flow rather than redirect flow.
+      signInFlow: 'popup',
+      signInOptions: [
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      ],
+    });
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         setAccount(true);
@@ -36,6 +39,9 @@ export default () => {
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab);
   };
+  if (!uiConfig) {
+    return <p>Loading...</p>;
+  }
   return (
     <div className="admin">
       <Helmet>
@@ -174,7 +180,7 @@ export default () => {
                   ) : (
                     <div id="signed-out">
                       <p>Please sign-in:</p>
-                      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+                      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase ? firebase.auth() : ''} />
                     </div>
                   )
                 }
