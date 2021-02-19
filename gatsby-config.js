@@ -13,7 +13,12 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/admin/*'],
+      },
+    },
     {
       resolve: 'gatsby-plugin-firebase',
       options: {

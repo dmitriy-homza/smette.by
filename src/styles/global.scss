@@ -119,6 +119,38 @@ body {
   background-color: #f7f5f5;
 }
 
+.admin {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .info-line {
+    display: none;
+  }
+  & > div {
+    padding: 30px 0px;
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 81.25rem;
+    width: 100%;
+    margin: 0px auto;
+  }
+  .admin-controls {
+    display: flex;
+    max-width: 37.5rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      margin-bottom: 0px;
+    }
+  }
+  .content {
+    padding: 20px 0px;
+  }
+}
+
 a {
   color: black;
   & span:hover,
