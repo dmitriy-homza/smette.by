@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="wrapper">
         <Navbar className="d-flex w-100 justify-content-between" expand="md">
           <NavbarBrand tag={Link} to="/" className="garamond">
-            <img src={logo} alt="Logo" />
+            <img src={logo} width="55.55" height="40" alt="Logo" />
             <span>Smette.by</span>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />

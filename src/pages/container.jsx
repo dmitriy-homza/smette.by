@@ -13,15 +13,15 @@ import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import '../styles/index.scss';
 import 'react-phone-input-2/lib/style.css';
-import auto1 from '../images/auto1.png';
-import auto2 from '../images/auto2.png';
-import auto3 from '../images/auto3.png';
-import auto4 from '../images/auto4.png';
-import auto5 from '../images/auto5.png';
-import gallery1 from '../images/gallery1.png';
-import gallery2 from '../images/gallery2.png';
-import gallery3 from '../images/gallery3.png';
-import gallery4 from '../images/gallery4.png';
+import auto1 from '../images/auto1.webp';
+import auto2 from '../images/auto2.webp';
+import auto3 from '../images/auto3.webp';
+import auto4 from '../images/auto4.webp';
+import auto5 from '../images/auto5.webp';
+import gallery1 from '../images/gallery1.webp';
+import gallery2 from '../images/gallery2.webp';
+import gallery3 from '../images/gallery3.webp';
+import gallery4 from '../images/gallery4.webp';
 import gallery5 from '../images/gallery5.png';
 import gallery6 from '../images/gallery6.png';
 import container1 from '../images/container1.png';
@@ -143,7 +143,7 @@ export default () => {
                         <div className="auto-wrapper w-100 flex-wrap">
                             <div className="card">
                                 <h3>Mercedes 410 D</h3>
-                                <img src={auto1} alt="Авто 1" />
+                                <img src={auto1} width="256.38" height="156.81" alt="Авто 1" />
                                 <ul>
                                     <li>Грузоподъёмность до 3 т</li>
                                     <li>
@@ -161,7 +161,7 @@ export default () => {
                             </div>
                             <div className="card">
                                 <h3>МАЗ 4370 «Зубрёнок»</h3>
-                                <img src={auto2} alt="Авто 2" />
+                                <img src={auto2} width="256.38" height="156.81" alt="Авто 2" />
                                 <ul>
                                     <li>Грузоподъёмность до 5 т</li>
                                     <li>
@@ -179,7 +179,7 @@ export default () => {
                             </div>
                             <div className="card">
                                 <h3>Самосвал МАЗ 5551</h3>
-                                <img src={auto3} alt="Авто 3" />
+                                <img src={auto3} width="256.38" height="156.81" alt="Авто 3" />
                                 <ul>
                                     <li>Грузоподъёмность до 10 т</li>
                                     <li>
@@ -197,7 +197,7 @@ export default () => {
                             </div>
                             <div className="card">
                                 <h3>Самосвал МАЗ 6501</h3>
-                                <img src={auto4} alt="Авто 4" />
+                                <img src={auto4} width="256.38" height="156.81" alt="Авто 4" />
                                 <ul>
                                     <li>Грузоподъёмность до 20 т</li>
                                     <li>
@@ -216,7 +216,7 @@ export default () => {
                             </div>
                             <div className="card">
                                 <h3>Контейнеры в аренду</h3>
-                                <img src={auto5} alt="Авто 5" />
+                                <img src={auto5} width="256.38" height="156.81" alt="Авто 5" />
                                 <ul>
                                     <li>Грузоподъёмность до 10 т</li>
                                     <li>
@@ -272,12 +272,12 @@ export default () => {
                         <div className="gallery">
                             <h2>Наши работы</h2>
                             <div className="gallery-wrapper d-flex flex-wrap">
-                                <img className="col-4" src={gallery1} alt="Наша работа" />
-                                <img className="col-4" src={gallery2} alt="Наша работа" />
-                                <img className="col-4" src={gallery3} alt="Наша работа" />
-                                <img className="col-4" src={gallery4} alt="Наша работа" />
-                                <img className="col-4" src={gallery5} alt="Наша работа" />
-                                <img className="col-4" src={gallery6} alt="Наша работа" />
+                                <img className="col-4" src={gallery1} width="292.5" height="200.69" alt="Наша работа" />
+                                <img className="col-4" src={gallery2} width="292.5" height="200.69" alt="Наша работа" />
+                                <img className="col-4" src={gallery3} width="292.5" height="200.69" alt="Наша работа" />
+                                <img className="col-4" src={gallery4} width="292.5" height="200.69" alt="Наша работа" />
+                                <img className="col-4" src={gallery5} width="292.5" height="200.69" alt="Наша работа" />
+                                <img className="col-4" src={gallery6} width="292.5" height="200.69" alt="Наша работа" />
                             </div>
                         </div>
                         <TakeNumber />

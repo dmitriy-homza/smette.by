@@ -2,42 +2,49 @@
   font-family: "Montserrat";
   src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Pragmatica";
   src: url("../fonts/Pragmatica/PRG65.otf") format("truetype");
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Pragmatica";
   src: url("../fonts/Pragmatica/PRG75.otf") format("truetype");
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Pragmatica";
   src: url("../fonts/Pragmatica/PRG55.otf") format("truetype");
   font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "EXO";
   src: url("../fonts/Exo-Bold.otf") format("truetype");
   font-weight: 400;
+  font-display: swap;
 }
 
 $grid-breakpoints: (
@@ -127,14 +134,14 @@ body {
     display: none;
   }
   & > div {
-    padding: 30px 0px;
+    padding: 1.875rem 0rem;
     flex: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 81.25rem;
     width: 100%;
-    margin: 0px auto;
+    margin: 0rem auto;
   }
   .admin-controls {
     display: flex;
@@ -147,7 +154,7 @@ body {
     }
   }
   .content {
-    padding: 20px 0px;
+    padding: 1.25rem 0rem;
   }
 }
 
@@ -183,7 +190,7 @@ body {
 }
 
 header {
-  background-image: url("../images/trash-bg.jpg");
+  background-image: url("../images/trash-bg.webp");
   background-position-y: 50%;
   background-size: 100%;
   .wrapper {
@@ -343,7 +350,7 @@ header {
 
 footer {
   color: $yellow-primary;
-  background-image: url("../images/trash-bg.jpg");
+  background-image: url("../images/trash-bg.webp");
   background-position: 0% -42%;
   .wrapper {
     padding: 1.625rem 0rem 2.5rem;
@@ -386,6 +393,7 @@ footer {
       }
       img {
         height: 2.5rem;
+        width: 3.44rem;
       }
     }
     .navbar-brand {
@@ -429,15 +437,18 @@ footer {
 .take-number {
   .valid {
     .form-control {
-      box-shadow: 0 0 14px 0.01rem #00ff0852 !important;
+      box-shadow: 0 0 0.875rem 0.16px #00ff0852 !important;
       transition: 0.2s !important;
     }
   }
   .invalid {
     .form-control {
-      box-shadow: 0 0 14px 0.01rem #ff330052 !important;
+      box-shadow: 0 0 0.875rem 0.16px #ff330052 !important;
       transition: 0.2s !important;
     }
+  }
+  input {
+    transition:  box-shadow 0.3s !important;
   }
 }
 
@@ -459,7 +470,7 @@ footer {
 }
 
 .info {
-  background-image: url("../images/trash-bg.jpg");
+  background-image: url("../images/trash-bg.webp");
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
@@ -476,7 +487,7 @@ footer {
     }
     .table-wrapper {
       background-color: white;
-      border-radius: 10px;
+      border-radius: 0.625rem;
       padding: 1.875rem 0rem 1.875rem 0rem;
       width: 73.25rem;
       table {
@@ -576,7 +587,7 @@ footer {
           transition: 0.3s;
           &:hover {
             text-decoration: underline;
-            text-shadow: 0 0 0.5625rem $yellow-primary;
+            text-shadow: 0 0 0.18rem #ffbd00;
             transition: 0.3s;
           }
           a {
@@ -607,11 +618,11 @@ footer {
 .custom-page {
   h1,
   h2 {
+    font-size: 2.625rem;
     max-width: 65rem;
     width: 100%;
     color: $yellow-primary;
     margin: 3.4375rem auto 2.5rem;
-    font-size: 3rem;
     font-weight: 600;
     font-family: "Pragmatica", sans-serif;
   }
@@ -622,6 +633,7 @@ footer {
   }
   .auto {
     background-image: unset;
+    padding-bottom: 5rem;
     h2 {
       color: black;
     }
@@ -639,17 +651,63 @@ footer {
     }
     .take-number {
       bottom: 1.25rem;
+      input:hover {
+        box-shadow: 0 0 0.5rem 0rem $yellow-primary !important;
+      }
     }
   }
   .our-works {
     height: auto;
     width: 100%;
-    background-image: url("../images/trash-bg.jpg");
+    background-image: url("../images/trash-bg.webp");
     background-position-y: 52%;
     h2 {
       color: $yellow-primary;
     }
     padding-bottom: 1.875rem;
+    .form {
+      input:hover {
+        box-shadow: 0 0 0.5rem 0rem #ffffffa9;
+      }
+    }
+  }
+  .rent {
+    .table-wrapper {
+      width: 69.25rem !important;
+      padding: 0.875rem 0rem 0.875rem 0rem;
+    }
+    table {
+      thead {
+        tr:first-child {
+          th {
+            text-align: left !important;
+          }
+          th:first-child {
+            padding-right: 3rem;
+          } 
+          th:nth-child(2) {
+            width: 13rem;
+          }
+          th:last-child {
+            padding-left: 13rem;
+            width: 4rem;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td:first-child {
+            width: 13.25rem !important;
+            padding-left: 1.875rem;
+            padding-right: 10rem !important;
+        text-align: center;
+          }
+          td:last-child {
+            padding-left: 12rem;
+          }
+        }
+      }
+    }
   }
   .transportation {
     .table-wrapper {
@@ -691,9 +749,9 @@ footer {
     }
   }
   .containers {
-    background-image: url("../images/trash-bg.jpg");
+    background-image: url("../images/trash-bg.webp");
     background-position-y: 52%;
-    height: 89.6875rem !important;
+    padding-bottom: 5rem;
     h1 {
       color: $yellow-primary;
       text-align: center;
