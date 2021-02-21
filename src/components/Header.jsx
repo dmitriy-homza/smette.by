@@ -25,7 +25,10 @@ const Header = () => {
 
   return (
     <header>
-      <Helmet>
+      <Helmet htmlAttributes={{
+        lang: 'ru',
+      }}
+      >
         <meta name="yandex-verification" content="2fb08ccfb84fb333" />
       </Helmet>
       <div className="wrapper">
