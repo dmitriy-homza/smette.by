@@ -93,10 +93,11 @@ main {
             .submit-button {
                 background-color: $yellow-primary;
                 color: white;
+                transition: 0.15s !important;
                 font-weight: 800;
                 &:active {
                     background-color: #ff9400 !important;
-                    transition: 0.15s;
+                    transition: 0.15s !important;
                     transform: scale(1.03);
                 }
             }

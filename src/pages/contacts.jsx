@@ -11,7 +11,7 @@ import 'react-phone-input-2/lib/style.css';
 export default () => {
   const [phone, setValue] = useState('+ 375 ()');
   return (
-    <>
+    <div className="iscontacts">
       <Helmet>
         <meta charSet="utf-8" />
         <title>Контакты - Смецце</title>
@@ -84,6 +84,6 @@ export default () => {
           </section>
         </main>
       </Layout>
-    </>
+    </div>
   );
 };

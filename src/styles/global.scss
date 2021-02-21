@@ -433,6 +433,45 @@ footer {
   }
 }
 
+.iscontacts {
+  background-image: url('../images/trash-bg.webp');
+  background-position-y: 81%;
+  background-size: cover;
+  h1 {
+    color: $yellow-primary !important;
+  }
+  footer,main,section {
+    background: unset;
+  }
+}
+
+.thanks {
+  border: 5px solid $yellow-primary;
+  border-radius: 19px;
+  padding: 1rem;
+  margin-top: 3rem;
+  max-width: 41rem;
+  animation: opacity 0.3s;
+  p {
+    font-size: 1.5rem;
+    font-family: Pragmatica, sans-serif;
+    font-weight: 600;
+    color: $yellow-primary;
+    padding: 1.8rem 1rem 0.45rem;
+  }
+  button {
+    background: unset;
+    float: right;
+    border: 0px;
+    transition: 0.2s;
+    padding-right: 0.8rem;
+    &:active {
+      transition: 0.2s;
+transform: scale(1.1);
+    }
+  }
+}
+
 .take-number {
   .valid {
     .form-control {
