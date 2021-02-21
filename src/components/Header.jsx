@@ -82,23 +82,23 @@ const Header = () => {
         <div className="wrapper">
           <div>
             <a href="tel:+375445749949">
-              <img width="16.25" height="17.88" onMouseLeave={() => document.getElementById('a1').classList.remove('active')} onMouseEnter={() => document.getElementById('a1').classList.add('active')} className="a1" id="a1" src={A1} alt="A1" />
-              <a width="16.25" height="16.25" href="viber://chat?number=375445749949"><img className="viber" src={viber} alt="Viber" /></a>
-              <a width="16.25" height="16.25" href="https://wa.me/+375445749949"><img className="whatsapp" src={whatsapp} alt="Whatsapp" /></a>
-              <a width="16.25" height="16.25" href="tg://resolve?domain=+375445749949"><img className="telegram" src={telegram} alt="Telegram" /></a>
+              <img width="20" height="20" onMouseLeave={() => document.getElementById('a1').classList.remove('active')} onMouseEnter={() => document.getElementById('a1').classList.add('active')} className="a1" id="a1" src={A1} alt="A1" />
+              <a href="viber://chat?number=375445749949"><img width="20" height="20" className="viber" src={viber} alt="Viber" /></a>
+              <a href="https://wa.me/+375445749949"><img width="20" height="20" className="whatsapp" src={whatsapp} alt="Whatsapp" /></a>
+              <a href="tg://resolve?domain=+375445749949"><img width="20" height="20" className="telegram" src={telegram} alt="Telegram" /></a>
               <span onMouseLeave={() => document.getElementById('a1').classList.remove('active')} onMouseEnter={() => document.getElementById('a1').classList.add('active')}>+375445749949</span>
             </a>
           </div>
           <div>
-            <a width="16.25" height="16.25" className="mts" href="tel:+375333549949">
-              <img src={mts} alt="MTS" />
+            <a className="mts" href="tel:+375333549949">
+              <img width="20" height="20" src={mts} alt="MTS" />
               <span>+375333549949</span>
 
             </a>
           </div>
           <div>
-            <a width="16.25" height="16.25" className="email-contact" href="mailto:tv@smette.by">
-              <img src={email} alt="Email" />
+            <a className="email-contact" href="mailto:tv@smette.by">
+              <img width="20" height="20" src={email} alt="Email" />
               <span>tv@smette.by</span>
             </a>
           </div>

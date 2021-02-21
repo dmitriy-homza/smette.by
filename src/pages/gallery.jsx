@@ -12,8 +12,8 @@ import gallery1 from '../images/gallery1.webp';
 import gallery2 from '../images/gallery2.webp';
 import gallery3 from '../images/gallery3.webp';
 import gallery4 from '../images/gallery4.webp';
-import gallery5 from '../images/gallery5.png';
-import gallery6 from '../images/gallery6.png';
+import gallery5 from '../images/gallery5.webp';
+import gallery6 from '../images/gallery6.webp';
 import TakeNumber from '../components/TakeNumber';
 
 export default () => {
@@ -30,12 +30,12 @@ export default () => {
             <div className="gallery">
               <h1>Наши работы</h1>
               <div className="gallery-wrapper d-flex flex-wrap">
-                <img className="col-4" src={gallery1} width="292.5" height="200.69" alt="Наша работа" />
-                <img className="col-4" src={gallery2} width="292.5" height="200.69" alt="Наша работа" />
-                <img className="col-4" src={gallery3} width="292.5" height="200.69" alt="Наша работа" />
-                <img className="col-4" src={gallery4} width="292.5" height="200.69" alt="Наша работа" />
-                <img className="col-4" src={gallery5} width="292.5" height="200.69" alt="Наша работа" />
-                <img className="col-4" src={gallery6} width="292.5" height="200.69" alt="Наша работа" />
+                <img className="col-4" src={gallery1} width="360" height="247" alt="Наша работа" />
+                <img className="col-4" src={gallery2} width="360" height="247" alt="Наша работа" />
+                <img className="col-4" src={gallery3} width="360" height="247" alt="Наша работа" />
+                <img className="col-4" src={gallery4} width="360" height="247" alt="Наша работа" />
+                <img className="col-4" src={gallery5} width="360" height="247" alt="Наша работа" />
+                <img className="col-4" src={gallery6} width="360" height="247" alt="Наша работа" />
               </div>
             </div>
             <TakeNumber />

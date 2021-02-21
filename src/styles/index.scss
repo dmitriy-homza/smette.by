@@ -263,22 +263,22 @@ main {
                     }
                 }
                 .img1 {
-                    background-image: url("../images/service1.jpg");
+                    background-image: url("../images/service1.webp");
                 }
                 .img2 {
-                    background-image: url("../images/service2.jpg");
+                    background-image: url("../images/service2.webp");
                 }
                 .img3 {
-                    background-image: url("../images/service3.jpg");
+                    background-image: url("../images/service3.webp");
                 }
                 .img4 {
-                    background-image: url("../images/service4.jpg");
+                    background-image: url("../images/service4.webp");
                 }
                 .img5 {
-                    background-image: url("../images/service5.jpg");
+                    background-image: url("../images/service5.webp");
                 }
                 .img6 {
-                    background-image: url("../images/service6.jpg");
+                    background-image: url("../images/service6.webp");
                 }
                 a {
                     background-color: $yellow-primary;
@@ -359,7 +359,7 @@ main {
             .card {
                 border-radius: 0.6875rem;
                 margin-bottom: 2.5rem;
-                padding: 1.125rem 1.3125rem 1.5625rem;
+                padding: 1.125rem 1.3125rem 1.125rem;;
                 width: 22.5rem;
                 h3 {
                     text-align: center;
@@ -368,8 +368,9 @@ main {
                     font-weight: 400;
                 }
                 img {
-                    margin-top: 0.8125rem;
+                    margin: 1.3rem 0rem 0.9rem;
                     height: 12.0625rem;
+                    width: 19.75rem;
                 }
                 ul {
                     margin-top: 0.75rem;
@@ -407,11 +408,11 @@ main {
                 padding-bottom: 0.3125rem;
                 span {
                     color: $yellow-primary;
-                    font-size: 2.25rem;
+                    font-size: 1.6rem;
                     transition: 0.3s;
                     &:hover {
                         text-decoration: underline;
-                        text-shadow: 0 0 0.18rem $yellow-primary;
+                        text-shadow: 0 0 0.12rem #ffbd00;
                         transition: 0.3s;
                     }
                     a {
@@ -452,6 +453,7 @@ main {
                 padding: 0rem;
                 margin-bottom: 2.1875rem;
                 width: 22.5rem;
+                height: 15.4375rem;
                 flex: unset;
                 box-shadow: 0.25rem 0.25rem 0.625rem rgb(0 0 0 / 25%);
                 border-radius: 0.625rem;
