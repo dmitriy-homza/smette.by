@@ -23,7 +23,7 @@ export default () => {
             <div className="contacts-wrapper d-flex justify-content-between">
               <div className="map">
                 <div>
-                  <iframe title="yandex-map" src="https://yandex.by/map-widget/v1/-/CCUMJORE0D" width="680" height="100%" frameBorder="1" allowFullScreen="true" />
+                  <iframe title="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad2e65a68c9a0b506f96f0fcd1e95761deaef3bca2e07d59351e7cb85fcf7736e&amp;source=constructor" width="680" height="100%" frameBorder="0" />
                 </div>
               </div>
               <div className="contacts-details">
