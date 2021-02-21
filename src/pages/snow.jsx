@@ -33,7 +33,7 @@ export default () => {
             <Layout>
                 <Helmet>
                     <meta charSet="utf-8" />
-                    <title>Вывоз снега - Смецце</title>
+                    <title>Вывоз снега - Smette</title>
                 </Helmet>
                 <main className="custom-page">
                     <section className="info transportation">

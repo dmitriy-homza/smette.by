@@ -32,7 +32,7 @@ export default () => {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>грузоперевозки - Смецце</title>
+                <title>грузоперевозки - Smette</title>
             </Helmet>
             <Layout>
                 <main className="custom-page">
@@ -114,10 +114,9 @@ export default () => {
                                         </tr>
                                         <tr>
                                             <td>
-                                                5 т / 18 м
+                                            5 т / 32 м
 <sup>3</sup>
-                                                {' '}
-/ 4.2 м
+/ 6 м
 <br />
 за 4 часа
 </td>

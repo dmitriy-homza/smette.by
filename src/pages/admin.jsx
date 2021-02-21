@@ -4,12 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col, Spinner } from 'reactstrap';
 import '../styles/index.scss';
 import firebase from 'gatsby-plugin-firebase';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import classnames from 'classnames';
 import Layout from '../components/Layout';
+import Cols4 from '../components/cols4';
 
 require('firebase/auth');
 
@@ -17,6 +18,23 @@ export default () => {
   const [uiConfig, setUIConfig] = useState(null);
   const [hasAccount, setAccount] = useState(false);
   const [currentUser, setUI] = useState(false);
+  const [data, setData] = useState('');
+  const [group, setGroup] = useState('trash');
+  const [activeTab, setActiveTab] = useState('1');
+
+  const fetchDataDefault = async (group) => {
+    setGroup(group);
+    const result = await firebase.database().ref(`${group}`).once('value').then((snapshot) => snapshot.val());
+    setData(result);
+    console.log(data);
+    console.log(group);
+  };
+
+  const writeNewAdditions = async (group) => {
+    firebase.database().ref(`${group}`).set(data);
+    console.log(group);
+  };
+
   useEffect(() => {
     setUIConfig({
       // Popup signin flow rather than redirect flow.
@@ -33,20 +51,20 @@ export default () => {
         setAccount(false);
       }
     });
+    fetchDataDefault(group);
   }, []);
-  const [activeTab, setActiveTab] = useState('1');
-
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab);
   };
   if (!uiConfig) {
     return <p>Loading...</p>;
   }
+
   return (
     <div className="admin">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Администрирование - Смецце</title>
+        <title>Администрирование - Smette</title>
       </Helmet>
       <Layout>
         {
@@ -67,7 +85,10 @@ export default () => {
                               <NavItem>
                                 <NavLink
                                   className={classnames({ active: activeTab === '1' })}
-                                  onClick={() => { toggle('1'); }}
+                                  onClick={() => {
+                                    fetchDataDefault('trash');
+                                    toggle('1');
+                                  }}
                                 >
                                   Вывоз мусора
                                 </NavLink>
@@ -107,7 +128,10 @@ export default () => {
                               <NavItem>
                                 <NavLink
                                   className={classnames({ active: activeTab === '6' })}
-                                  onClick={() => { toggle('6'); }}
+                                  onClick={() => {
+                                    fetchDataDefault('snow');
+                                    toggle('6');
+                                  }}
                                 >
                                   Уборка и вывоз снега
                                 </NavLink>
@@ -117,27 +141,42 @@ export default () => {
                               <TabPane tabId="1">
                                 <Row>
                                   <Col sm="12">
-                                    <h4>Tab 1 Contents</h4>
+                                    <Button color="success" onClick={() => writeNewAdditions(group)}>
+                                      Сохранить
+                                    </Button>
+                                    <table>
+                                      <thead>
+                                        <tr>
+                                          <th rowSpan="2">
+                                            Вес / объём
+                                            <br />
+                                            мусора
+                                          </th>
+                                          <th colSpan="4">
+                                            Стоимость вывоза мусора для физических лиц за рейс
+                                          </th>
+                                        </tr>
+                                        <tr>
+                                          <th>без грузчиков</th>
+                                          <th>с 1-м грузчиком</th>
+                                          <th>с 2-мя грузчиками</th>
+                                          <th>тариф при выезде за МКАД</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        {(data && data[0] === 'trash') ? data.map((item, index) => {
+                                          if (index > 0) {
+                                            return (<Cols4 array={data} index={index} isEdit setData={setData} />);
+                                          }
+                                        }) : <Spinner color="primary" />}
+
+                                      </tbody>
+                                    </table>
                                   </Col>
                                 </Row>
                               </TabPane>
                               <TabPane tabId="2">
-                                <Row>
-                                  <Col sm="6">
-                                    <Card body>
-                                      <CardTitle>Special Title Treatment</CardTitle>
-                                      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                                      <Button>Go somewhere</Button>
-                                    </Card>
-                                  </Col>
-                                  <Col sm="6">
-                                    <Card body>
-                                      <CardTitle>Special Title Treatment</CardTitle>
-                                      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                                      <Button>Go somewhere</Button>
-                                    </Card>
-                                  </Col>
-                                </Row>
+                                <Row />
                               </TabPane>
 
                               <TabPane tabId="3">
@@ -164,7 +203,37 @@ export default () => {
                               <TabPane tabId="6">
                                 <Row>
                                   <Col sm="12">
-                                    <h4>Tab 1 Contents</h4>
+                                    <Button color="success" onClick={() => writeNewAdditions(group)}>
+                                      Сохранить
+                                    </Button>
+                                    <table>
+                                      <thead>
+                                        <tr>
+                                          <th rowSpan="2">
+                                            Вес / объём
+                                            <br />
+                                            мусора
+                                          </th>
+                                          <th colSpan="4">
+                                            Стоимость вывоза мусора для физических лиц за рейс
+                                          </th>
+                                        </tr>
+                                        <tr>
+                                          <th>без грузчиков</th>
+                                          <th>с 1-м грузчиком</th>
+                                          <th>с 2-мя грузчиками</th>
+                                          <th>тариф при выезде за МКАД</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        {(data && data[0] === 'snow') ? data.map((item, index) => {
+                                          if (index > 0) {
+                                            return (<Cols4 array={data} index={index} isEdit setData={setData} />);
+                                          }
+                                        }) : <Spinner color="primary" />}
+
+                                      </tbody>
+                                    </table>
                                   </Col>
                                 </Row>
                               </TabPane>

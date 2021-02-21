@@ -25,7 +25,7 @@ export default () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Автопарк - Смецце</title>
+        <title>Автопарк - Smette</title>
       </Helmet>
       <Layout>
         <main>

@@ -150,7 +150,7 @@ body {
     justify-content: space-between;
     align-items: center;
     p {
-      margin-bottom: 0px;
+      margin-bottom: 0rem;
     }
   }
   .content {
@@ -214,7 +214,7 @@ header {
           color: #f7f5f5;
           animation: opacity 0.3s;
           .dropdown-item {
-            padding: 0px;
+            padding: 0rem;
           }
           a {
             padding: 0.25rem 1.5rem;
@@ -235,8 +235,8 @@ header {
           }
           a:focus,
           button:focus {
-            border: 0px;
-            outline: 0px;
+            border: 0rem;
+            outline: 0rem;
           }
         }
         ul {
@@ -446,8 +446,8 @@ footer {
 }
 
 .thanks {
-  border: 5px solid $yellow-primary;
-  border-radius: 19px;
+  border: 0.3125rem solid $yellow-primary;
+  border-radius: 1.1875rem;
   padding: 1rem;
   margin-top: 3rem;
   animation: opacity 0.3s;
@@ -461,7 +461,7 @@ footer {
   button {
     background: unset;
     float: right;
-    border: 0px;
+    border: 0rem;
     transition: 0.2s;
     padding-right: 0.8rem;
     &:active {
@@ -474,13 +474,13 @@ transform: scale(1.1);
 .take-number {
   .valid {
     .form-control {
-      box-shadow: 0 0 0.875rem 0.16px #00ff0852 !important;
+      box-shadow: 0 0 0.875rem 0.01rem #00ff0852 !important;
       transition: 0.2s !important;
     }
   }
   .invalid {
     .form-control {
-      box-shadow: 0 0 0.875rem 0.16px #ff330052 !important;
+      box-shadow: 0 0 0.875rem 0.01rem #ff330052 !important;
       transition: 0.2s !important;
     }
   }
@@ -676,7 +676,7 @@ transform: scale(1.1);
     }
     .auto-wrapper {
       .card {
-        border: 0px;
+        border: 0rem;
         box-shadow: 0.25rem 0.25rem 0.625rem rgb(0 0 0 / 25%);
       }
     }

@@ -32,7 +32,7 @@ export default () => {
             <Layout>
                 <Helmet>
                     <meta charSet="utf-8" />
-                    <title>Услуги грузчиков - Смецце</title>
+                    <title>Услуги грузчиков - Smette</title>
                 </Helmet>
                 <main className="custom-page">
                     <section className="info">

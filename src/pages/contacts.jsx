@@ -14,7 +14,7 @@ export default () => {
     <div className="iscontacts">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Контакты - Смецце</title>
+        <title>Контакты - Smette</title>
       </Helmet>
       <Layout>
         <main className="custom-page nav-page">

@@ -22,7 +22,7 @@ export default () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Наши работы - Смецце</title>
+        <title>Наши работы - Smette</title>
       </Helmet>
       <Layout>
         <main className="custom-page nav-page">
@@ -45,7 +45,7 @@ export default () => {
             <div className="contacts-wrapper d-flex justify-content-between">
               <div className="map">
                 <div>
-                    <iframe title="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad2e65a68c9a0b506f96f0fcd1e95761deaef3bca2e07d59351e7cb85fcf7736e&amp;source=constructor" width="680" height="100%" frameBorder="0" />
+                  <iframe title="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad2e65a68c9a0b506f96f0fcd1e95761deaef3bca2e07d59351e7cb85fcf7736e&amp;source=constructor" width="680" height="100%" frameBorder="0" />
                 </div>
               </div>
               <div className="contacts-details">

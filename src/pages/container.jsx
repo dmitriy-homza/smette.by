@@ -37,7 +37,7 @@ export default () => {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Контейнеры для ТБО - Смецце</title>
+                <title>Контейнеры для ТБО - Smette</title>
             </Helmet>
             <Layout>
                 <main className="custom-page nav-page">
