@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable react/style-prop-object */
@@ -63,17 +64,19 @@ export default () => {
             <div className={phone === '+ 375 ()' ? 'react-tel-input' : 'react-tel-input checked'}>
               {status === 'SUCCESS' && !isInvalid && <p className="succes">Спасибо, ваша заявка отправлена!</p>}
               {isInvalid && <p className="error">Введите Ваш номер телефона!</p>}
-              <PhoneInput
-                disableSearchIcon
-                disableDropdown
-                country="by"
-                placeholder="+ 375 (__) ___-__-__"
-                onChange={(event) => typePhone(event)}
-                inputProps={{
-                  name: 'phone',
-                  required: true,
-                }}
-              />
+              <label htmlFor="phone">
+                <PhoneInput
+                  disableSearchIcon
+                  disableDropdown
+                  country="by"
+                  placeholder="+ 375 (__) ___-__-__"
+                  onChange={(event) => typePhone(event)}
+                  inputProps={{
+                    name: 'phone',
+                    required: true,
+                  }}
+                />
+              </label>
             </div>
             <input className="submit-button" type="submit" value="Перезвоните мне" />
           </form>
