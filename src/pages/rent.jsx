@@ -6,8 +6,11 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable react/style-prop-object */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Spinner } from 'reactstrap';
 import { Helmet } from 'react-helmet';
+import firebase from 'gatsby-plugin-firebase';
+import 'firebase/database';
 import PhoneInput from 'react-phone-input-2';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
@@ -25,9 +28,18 @@ import gallery4 from '../images/gallery4.webp';
 import gallery5 from '../images/gallery5.webp';
 import gallery6 from '../images/gallery6.webp';
 import TakeNumber from '../components/TakeNumber';
+import Cols4 from '../components/cols4';
 
 export default () => {
     const [phone, setValue] = useState('+ 375 ()');
+    const [data, setData] = useState('');
+    const fetchDataDefault = async () => {
+        const result = await firebase.database().ref('rent').once('value').then((snapshot) => snapshot.val());
+        setData(result);
+      };
+      useEffect(() => {
+        fetchDataDefault();
+      }, []);
     return (
         <>
             <Helmet>
@@ -65,30 +77,7 @@ export default () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                10 т / 8 м
-<sup>3</sup>
-                                            </td>
-                                            <td>
-                                                230 руб.
-</td>
-                                            <td>
-                                                2 руб. / км
-</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                10 т / 12 м
-<sup>3</sup>
-                                            </td>
-                                            <td>
-                                                250 руб.
-</td>
-                                            <td>
-                                                2 руб. / км
-</td>
-                                        </tr>
+                                    {data ? data.map((item, index) => (index === 0 ? '' : <Cols4 array={data} index={index} isEdit={false} setData={setData} />)) : <Spinner color="primary" />}
                                     </tbody>
                                 </table>
                                 <div className="table-details">

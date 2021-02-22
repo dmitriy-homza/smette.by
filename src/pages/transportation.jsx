@@ -6,10 +6,13 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable react/style-prop-object */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import PhoneInput from 'react-phone-input-2';
-import { Link } from 'gatsby';
+import { Spinner } from 'reactstrap';
+import firebase from 'gatsby-plugin-firebase';
+import 'firebase/database';
+import parse from 'html-react-parser';
+import Cols4 from '../components/cols4';
 import Layout from '../components/Layout';
 import '../styles/index.scss';
 import 'react-phone-input-2/lib/style.css';
@@ -28,6 +31,14 @@ import TakeNumber from '../components/TakeNumber';
 
 export default () => {
     const [phone, setValue] = useState('+ 375 ()');
+    const [data, setData] = useState('');
+    const fetchDataDefault = async () => {
+        const result = await firebase.database().ref('transportation').once('value').then((snapshot) => snapshot.val());
+        setData(result);
+      };
+      useEffect(() => {
+        fetchDataDefault();
+      }, []);
     return (
         <>
             <Helmet>
@@ -63,80 +74,7 @@ export default () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                3 т / 18 м
-<sup>3</sup>
-                                                {' '}
-/ 4.2 м
-</td>
-                                            <td>
-                                                40 руб./
-<br />
-за 2 часа
-</td>
-                                            <td>
-                                                60 руб./
-<br />
-за 2 часа
-</td>
-                                            <td>
-                                                80 руб./
-<br />
-                                                за 2 часа
-</td>
-                                            <td>1 руб. / км</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                5 т / 32 м
-<sup>3</sup>
-/ 6 м
-<br />
-за 3 часа
-</td>
-                                            <td>
-                                                120 руб./
-<br />
-за 3 часа
-</td>
-                                            <td>
-                                                150 руб./
-<br />
-за 3 часа
-</td>
-                                            <td>
-                                                180 руб./
-<br />
-                                                за 3 часа
-</td>
-                                            <td>1,5 руб. / км</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                            5 т / 32 м
-<sup>3</sup>
-/ 6 м
-<br />
-за 4 часа
-</td>
-                                            <td>
-                                                150 руб./
-<br />
-за 4 часа
-</td>
-                                            <td>
-                                                180 руб./
-<br />
-за 4 часа
-</td>
-                                            <td>
-                                                210 руб./
-<br />
-                                                за 4 часа
-</td>
-                                            <td>1,5 руб. / км</td>
-                                        </tr>
+                                        {data ? data.map((item, index) => <tr>{(index === 0 ? '' : data[index].map((item2, i) => <td><pre>{parse(item2)}</pre></td>))}</tr>) : <Spinner color="primary" />}
                                     </tbody>
                                 </table>
                                 <div className="table-details">

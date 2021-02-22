@@ -34,12 +34,14 @@ export default ({ array, index, isEdit, setData }) => {
           <tr>
             {array[index].map((item, i) => (i === 0 ? (
               <td>
-                {item}
-                {' '}
-                м
-                <sup>3</sup>
+                <pre>
+                  {item.replace(/<br \/>/gi, '\n')}
+                  {' '}
+                  м
+                  <sup>3</sup>
+                </pre>
               </td>
-            ) : <td>{item}</td>))}
+            ) : <td><pre>{item.replace(/<br \/>/gi, '\n')}</pre></td>))}
           </tr>
         </>
       )
