@@ -58,42 +58,54 @@ export default () => {
           <section className="services">
             <h2>Услуги и стоимость</h2>
             <div className="service-cards-wrapper d-flex flex-wrap">
-              <div className="service-card col-4">
-                <h3>Вывоз мусора</h3>
-                <div className="card-img img1">
-                  <Link to="/trash">Подробная стоимость</Link>
+              <Link className="service-card col-4" to="/trash">
+                <div>
+                  <h3>Вывоз мусора</h3>
+                  <div className="card-img img1">
+                    <Link to="/trash">Подробная стоимость</Link>
+                  </div>
                 </div>
-              </div>
-              <div className="service-card col-4">
-                <h3>Аренда контейнеров</h3>
-                <div className="card-img img2">
-                  <Link to="/rent">Подробная стоимость</Link>
+              </Link>
+              <Link className="service-card col-4" to="/rent">
+                <div>
+                  <h3>Аренда контейнеров</h3>
+                  <div className="card-img img2">
+                    <Link to="/rent">Подробная стоимость</Link>
+                  </div>
                 </div>
-              </div>
-              <div className="service-card col-4">
-                <h3>Уборка и вывоз снега</h3>
-                <div className="card-img img3">
-                  <Link to="/snow">Подробная стоимость</Link>
+              </Link>
+              <Link className="service-card col-4" to="/snow">
+                <div>
+                  <h3>Уборка и вывоз снега</h3>
+                  <div className="card-img img3">
+                    <Link to="/snow">Подробная стоимость</Link>
+                  </div>
                 </div>
-              </div>
-              <div className="service-card col-4">
-                <h3>Грузоперевозки</h3>
-                <div className="card-img img4">
-                  <Link to="/transportation">Подробная стоимость</Link>
+              </Link>
+              <Link className="service-card col-4" to="/transportation">
+                <div>
+                  <h3>Грузоперевозки</h3>
+                  <div className="card-img img4">
+                    <Link to="/transportation">Подробная стоимость</Link>
+                  </div>
                 </div>
-              </div>
-              <div className="service-card col-4">
-                <h3>Продажа контейнеров ТБО</h3>
-                <div className="card-img img5">
-                  <Link to="/container">Подробная стоимость</Link>
+              </Link>
+              <Link className="service-card col-4" to="/container">
+                <div>
+                  <h3>Продажа контейнеров ТБО</h3>
+                  <div className="card-img img5">
+                    <Link to="/container">Подробная стоимость</Link>
+                  </div>
                 </div>
-              </div>
-              <div className="service-card col-4">
-                <h3>Услуги грузчиков</h3>
-                <div className="card-img img6">
-                  <Link to="/movers">Подробная стоимость</Link>
+              </Link>
+              <Link className="service-card col-4" to="/movers">
+                <div>
+                  <h3>Услуги грузчиков</h3>
+                  <div className="card-img img6">
+                    <Link to="/movers">Подробная стоимость</Link>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
             <TakeNumber />
           </section>
