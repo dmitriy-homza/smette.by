@@ -881,3 +881,13 @@ transform: scale(1.1);
 background-size: 85% !important;
   }
 }
+
+
+@media (max-width: 420px) {
+.hello {
+  img {
+    width: 217px !important;
+    height: 178px!important;
+  }
+}
+}
