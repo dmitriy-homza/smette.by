@@ -6,11 +6,13 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable react/style-prop-object */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import PhoneInput from 'react-phone-input-2';
-import { Link } from 'gatsby';
+import { Spinner } from 'reactstrap';
+import firebase from 'gatsby-plugin-firebase';
 import Layout from '../components/Layout';
+import Cols4 from '../components/cols4';
+import 'firebase/database';
 import '../styles/index.scss';
 import 'react-phone-input-2/lib/style.css';
 import auto1 from '../images/auto1.webp';
@@ -33,6 +35,14 @@ import TakeNumber from '../components/TakeNumber';
 
 export default () => {
     const [phone, setValue] = useState('+ 375 ()');
+    const [data, setData] = useState('');
+    const fetchDataDefault = async () => {
+        const result = await firebase.database().ref('containers').once('value').then((snapshot) => snapshot.val());
+        setData(result);
+      };
+      useEffect(() => {
+        fetchDataDefault();
+      }, []);
     return (
         <>
             <Helmet>
@@ -43,12 +53,19 @@ export default () => {
                 <main className="custom-page nav-page">
                     <section className="auto containers info">
                         <h1>Контейнеры для ТБО</h1>
-                        <div className="auto-wrapper w-100 flex-wrap">
+                        {data ? (
+<div className="auto-wrapper w-100 flex-wrap">
                             <div className="card">
                                 <h3>Контейнер 120 л</h3>
                                 <img src={container1} alt="Авто 1" />
                                 <ul>
-                                    <li>Стоимость - 90 руб.</li>
+                                    <li>
+                                            Стоимость -
+                                            {' '}
+{data[1]}
+{' '}
+руб.
+</li>
                                     <li>
                                         Грузоподъёмность до 48 кг
                                     </li>
@@ -65,7 +82,13 @@ export default () => {
                                 <h3>Контейнер 240 л</h3>
                                 <img src={container2} alt="Авто 2" />
                                 <ul>
-                                    <li>Стоимость -  110 руб.</li>
+                                    <li>
+Стоимость -
+{' '}
+{data[2]}
+{' '}
+руб.
+</li>
                                     <li>
                                         Грузоподъёмность до 96 кг
                                     </li>
@@ -82,7 +105,13 @@ export default () => {
                                 <h3>Контейнер 360 л</h3>
                                 <img src={container3} alt="Авто 3" />
                                 <ul>
-                                    <li>Стоимость - 195 руб.</li>
+                                    <li>
+Стоимость -
+{' '}
+{data[3]}
+{' '}
+руб.
+</li>
                                     <li>
                                         Грузоподъёмность до 170 кг
                                     </li>
@@ -99,7 +128,13 @@ export default () => {
                                 <h3>Контейнер 660 л</h3>
                                 <img src={container4} alt="Авто 4" />
                                 <ul>
-                                    <li>Стоимость - 450 руб.</li>
+                                    <li>
+Стоимость -
+{' '}
+{data[4]}
+{' '}
+руб.
+</li>
                                     <li>
                                         Грузоподъёмность до 510 кг
                                     </li>
@@ -116,7 +151,13 @@ export default () => {
                                 <h3>Контейнер 1100 л</h3>
                                 <img src={container5} alt="Авто 5" />
                                 <ul>
-                                    <li>Стоимость - 500 руб.</li>
+                                    <li>
+Стоимость -
+{' '}
+{data[5]}
+{' '}
+руб.
+</li>
                                     <li>
                                         Грузоподъёмность до 510 кг
                                     </li>
@@ -136,6 +177,7 @@ export default () => {
                                 </ul>
                             </div>
                         </div>
+) : <Spinner />}
                         <TakeNumber />
                     </section>
                     <section className="auto">

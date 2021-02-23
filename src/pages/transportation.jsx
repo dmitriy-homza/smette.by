@@ -12,7 +12,6 @@ import { Spinner } from 'reactstrap';
 import firebase from 'gatsby-plugin-firebase';
 import 'firebase/database';
 import parse from 'html-react-parser';
-import Cols4 from '../components/cols4';
 import Layout from '../components/Layout';
 import '../styles/index.scss';
 import 'react-phone-input-2/lib/style.css';
@@ -43,7 +42,7 @@ export default () => {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>грузоперевозки - Smette</title>
+                <title>Грузоперевозки - Smette</title>
             </Helmet>
             <Layout>
                 <main className="custom-page">

@@ -26,13 +26,10 @@ export default () => {
     setGroup(group);
     const result = await firebase.database().ref(`${group}`).once('value').then((snapshot) => snapshot.val());
     setData(result);
-    console.log(data);
-    console.log(group);
   };
 
   const writeNewAdditions = async (group) => {
     firebase.database().ref(`${group}`).set(data);
-    console.log(group);
   };
 
   useEffect(() => {
@@ -58,6 +55,10 @@ export default () => {
   };
   if (!uiConfig) {
     return <p>Loading...</p>;
+  }
+
+  function handleChange(event, i) {
+    data[i] = event.target.value;
   }
 
   return (
@@ -96,7 +97,10 @@ export default () => {
                               <NavItem>
                                 <NavLink
                                   className={classnames({ active: activeTab === '2' })}
-                                  onClick={() => { toggle('2'); }}
+                                  onClick={() => {
+                                    fetchDataDefault('rent');
+                                    toggle('2');
+                                  }}
                                 >
                                   Аренда контейнеров
                                 </NavLink>
@@ -104,7 +108,10 @@ export default () => {
                               <NavItem>
                                 <NavLink
                                   className={classnames({ active: activeTab === '3' })}
-                                  onClick={() => { toggle('3'); }}
+                                  onClick={() => {
+                                    fetchDataDefault('transportation');
+                                    toggle('3');
+                                  }}
                                 >
                                   Грузоперевозки
                                 </NavLink>
@@ -112,7 +119,10 @@ export default () => {
                               <NavItem>
                                 <NavLink
                                   className={classnames({ active: activeTab === '4' })}
-                                  onClick={() => { toggle('4'); }}
+                                  onClick={() => {
+                                    fetchDataDefault('movers');
+                                    toggle('4');
+                                  }}
                                 >
                                   Услуги грузчиков
                                 </NavLink>
@@ -120,7 +130,10 @@ export default () => {
                               <NavItem>
                                 <NavLink
                                   className={classnames({ active: activeTab === '5' })}
-                                  onClick={() => { toggle('5'); }}
+                                  onClick={() => {
+                                    fetchDataDefault('containers');
+                                    toggle('5');
+                                  }}
                                 >
                                   Продажа контейнеров ТБО
                                 </NavLink>
@@ -176,27 +189,149 @@ export default () => {
                                 </Row>
                               </TabPane>
                               <TabPane tabId="2">
-                                <Row />
+                                <Row>
+                                  <Col sm="12">
+                                    <Button color="success" onClick={() => writeNewAdditions(group)}>
+                                      Сохранить
+                                    </Button>
+                                    <table>
+                                      <thead>
+                                        <tr>
+                                          <th>
+                                            Грузоподъёмность /
+                                            {' '}
+                                            <br />
+                                            объём контейнера
+                                          </th>
+                                          <th>
+                                            Стоимость аренды контейнера
+                                            за 5 дней (минимальный заказ)
+                                          </th>
+                                          <th>
+                                            Тариф при выезде
+                                            <br />
+                                            за МКАД
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        {(data && data[0] === 'rent') ? data.map((item, index) => {
+                                          if (index > 0) {
+                                            return (<Cols4 array={data} index={index} isEdit setData={setData} />);
+                                          }
+                                        }) : <Spinner color="primary" />}
+                                      </tbody>
+                                    </table>
+                                  </Col>
+                                </Row>
                               </TabPane>
-
                               <TabPane tabId="3">
                                 <Row>
                                   <Col sm="12">
-                                    <h4>Tab 1 Contents</h4>
+                                    <Button color="success" onClick={() => writeNewAdditions(group)}>
+                                      Сохранить
+                                    </Button>
+                                    <table>
+                                      <thead>
+                                        <tr>
+                                          <th rowSpan="2">
+                                            Вес / объём груза /
+                                            длина кузова
+                                          </th>
+                                          <th colSpan="4">
+                                            Стоимость грузоперевозок для физических лиц за рейс
+                                          </th>
+                                        </tr>
+                                        <tr>
+                                          <th>без грузчиков</th>
+                                          <th>с 1-м грузчиком</th>
+                                          <th>с 2-мя грузчиками</th>
+                                          <th>тариф при выезде за МКАД</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        {(data && data[0] === 'transportation') ? data.map((item, index) => {
+                                          if (index > 0) {
+                                            return (<Cols4 array={data} index={index} isEdit setData={setData} />);
+                                          }
+                                        }) : <Spinner color="primary" />}
+                                      </tbody>
+                                    </table>
                                   </Col>
                                 </Row>
                               </TabPane>
                               <TabPane tabId="4">
                                 <Row>
                                   <Col sm="12">
-                                    <h4>Tab 1 Contents</h4>
+                                    <Button color="success" onClick={() => writeNewAdditions(group)}>
+                                      Сохранить
+                                    </Button>
+                                    <table>
+                                      <thead>
+                                        <tr>
+                                          <th>
+                                            Вес / объём
+                                            мусора
+                                          </th>
+                                          <th>
+                                            Количество мешков мусора
+                                            весом не более 30-35 кг
+                                          </th>
+                                          <th colSpan="2">
+                                            Стоимость услуг грузчиков при
+                                            погрузочно-разгрузочных работах
+                                          </th>
+                                        </tr>
+                                        <tr>
+                                          <th />
+                                          <th />
+                                          <th>с 1-м грузчиком</th>
+                                          <th>с 2-мя грузчиками</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        {(data && data[0] === 'movers') ? data.map((item, index) => {
+                                          if (index > 0) {
+                                            return (<Cols4 array={data} index={index} isEdit setData={setData} />);
+                                          }
+                                        }) : <Spinner color="primary" />}
+                                      </tbody>
+                                    </table>
                                   </Col>
                                 </Row>
                               </TabPane>
                               <TabPane tabId="5">
                                 <Row>
                                   <Col sm="12">
-                                    <h4>Tab 1 Contents</h4>
+                                    <Button color="success" onClick={() => writeNewAdditions(group)}>
+                                      Сохранить
+                                    </Button>
+                                    <table>
+                                      <thead>
+                                        <tr>
+                                          <th>Контейнер 120 л</th>
+                                          <th>Контейнер 240 л</th>
+                                          <th>Контейнер 360 л</th>
+                                          <th>Контейнер 660 л</th>
+                                          <th>Контейнер 1100 л</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          {(data && data[0] === 'containers') ? data.map((item, index) => (
+                                            index === 0 ? '' : (
+                                              <td>
+                                                <textarea
+                                                  defaultValue={item}
+                                                  onChange={(event) => handleChange(event, index)}
+                                                  rows="1"
+                                                />
+                                              </td>
+                                            )
+                                          )) : <Spinner color="primary" />}
+                                        </tr>
+                                      </tbody>
+                                    </table>
                                   </Col>
                                 </Row>
                               </TabPane>
@@ -212,10 +347,10 @@ export default () => {
                                           <th rowSpan="2">
                                             Вес / объём
                                             <br />
-                                            мусора
+                                            снега
                                           </th>
                                           <th colSpan="4">
-                                            Стоимость вывоза мусора для физических лиц за рейс
+                                            Стоимость вывоза снега для физических лиц за рейс
                                           </th>
                                         </tr>
                                         <tr>
@@ -231,7 +366,6 @@ export default () => {
                                             return (<Cols4 array={data} index={index} isEdit setData={setData} />);
                                           }
                                         }) : <Spinner color="primary" />}
-
                                       </tbody>
                                     </table>
                                   </Col>

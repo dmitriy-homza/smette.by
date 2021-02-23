@@ -4,7 +4,7 @@
 /* eslint-disable react/style-prop-object */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import { Button } from 'reactstrap';
+import parse from 'html-react-parser';
 
 export default ({ array, index, isEdit, setData }) => {
   const [isInvalid, setInvalid] = useState(false);
@@ -22,7 +22,7 @@ export default ({ array, index, isEdit, setData }) => {
               <textarea
                 defaultValue={item}
                 onChange={(event) => handleChange(event, i)}
-                rows="1"
+                rows="2"
               />
             </td>
           ))}
@@ -35,13 +35,13 @@ export default ({ array, index, isEdit, setData }) => {
             {array[index].map((item, i) => (i === 0 ? (
               <td>
                 <pre>
-                  {item.replace(/<br \/>/gi, '\n')}
+                  {parse(item)}
                   {' '}
                   м
                   <sup>3</sup>
                 </pre>
               </td>
-            ) : <td><pre>{item.replace(/<br \/>/gi, '\n')}</pre></td>))}
+            ) : <td><pre>{parse(item)}</pre></td>))}
           </tr>
         </>
       )

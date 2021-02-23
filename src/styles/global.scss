@@ -74,6 +74,7 @@ pre {
   font-family: Pragmatica, sans-serif;
   font-weight: 200;
   font-size: 1.5rem;
+  margin-bottom: 0rem;
 }
 
 .mts {
@@ -132,10 +133,49 @@ body {
   background-color: #f7f5f5;
 }
 
+.spinner-border {
+  margin: 1rem;
+  color: $yellow-primary !important;
+}
+
 .admin {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  .signed-In {
+    button {
+      margin: 1rem;
+    }
+  }
+
+  table {
+    width: 100%;
+    tr {
+      th {
+        padding: 0rem 1rem;
+      }
+    }
+    tr:first-child {
+      td {
+        textarea {
+          margin-top: 1rem;
+        }
+      }
+    }
+    textarea {
+      width: 100%;
+      resize: none;
+    background: #f6f6f6;
+    border: 1px solid #cecece;
+    padding: 8px 0 8px 10px;
+    height: 110px;
+    width: 100%;
+    &:focus {
+      outline: 1px solid #36b9cc;
+      outline-offset: 0;
+    }
+    }
+  }
   .info-line {
     display: none;
   }
@@ -669,6 +709,10 @@ transform: scale(1.1);
     font-weight: 600;
     font-family: "Pragmatica", sans-serif;
   }
+  .spinner-border {
+    margin: 1rem 3rem;
+  }
+
   .contacts {
     h2 {
       color: black;

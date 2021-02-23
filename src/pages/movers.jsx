@@ -6,10 +6,12 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable react/style-prop-object */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import PhoneInput from 'react-phone-input-2';
+import { Spinner } from 'reactstrap';
+import firebase from 'gatsby-plugin-firebase';
 import Layout from '../components/Layout';
+import 'firebase/database';
 import '../styles/index.scss';
 import 'react-phone-input-2/lib/style.css';
 import auto1 from '../images/auto1.webp';
@@ -24,9 +26,18 @@ import gallery4 from '../images/gallery4.webp';
 import gallery5 from '../images/gallery5.webp';
 import gallery6 from '../images/gallery6.webp';
 import TakeNumber from '../components/TakeNumber';
+import Cols4 from '../components/cols4';
 
 export default () => {
     const [phone, setValue] = useState('+ 375 ()');
+    const [data, setData] = useState('');
+    const fetchDataDefault = async () => {
+        const result = await firebase.database().ref('movers').once('value').then((snapshot) => snapshot.val());
+        setData(result);
+      };
+      useEffect(() => {
+        fetchDataDefault();
+      }, []);
     return (
         <>
             <Layout>
@@ -67,88 +78,7 @@ export default () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                500 кг / 1 м
-<sup>3</sup>
-                                            </td>
-                                            <td>10-15 мешков</td>
-                                            <td>15 руб.</td>
-                                            <td>30 руб.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                {' '}
-1 т / 5 м
-<sup>3</sup>
-                                            </td>
-                                            <td>25-30 мешков</td>
-                                            <td>25 руб.</td>
-                                            <td>30 руб.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                2 т / 10 м
-<sup>3</sup>
-                                            </td>
-                                            <td>50-60 мешков</td>
-                                            <td>40 руб.</td>
-                                            <td>60 руб.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                3 т / 15 м
-<sup>3</sup>
-                                            </td>
-                                            <td>70-80 мешков</td>
-                                            <td />
-                                            <td>80 руб.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                4 т / 20 м
-<sup>3</sup>
-                                            </td>
-                                            <td>90-100 мешков</td>
-                                            <td />
-                                            <td>110 руб.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                5 т / 32 м
-<sup>3</sup>
-                                            </td>
-                                            <td>100-150 мешков</td>
-                                            <td />
-                                            <td>120 руб.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                10 т / 8 м
-<sup>3</sup>
-                                            </td>
-                                            <td>150-160 мешков</td>
-                                            <td />
-                                            <td>130 руб.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                10 т / 12 м
-<sup>3</sup>
-                                            </td>
-                                            <td>180-200 мешков</td>
-                                            <td />
-                                            <td>160 руб.</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                10 т / 14 м
-<sup>3</sup>
-                                            </td>
-                                            <td>200-250 мешков</td>
-                                            <td />
-                                            <td>160 руб.</td>
-                                        </tr>
+                                    {data ? data.map((item, index) => (index === 0 ? '' : <Cols4 array={data} index={index} isEdit={false} setData={setData} />)) : <Spinner color="primary" />}
                                     </tbody>
                                 </table>
                                 <div className="table-details">

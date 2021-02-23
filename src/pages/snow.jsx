@@ -6,11 +6,13 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable react/style-prop-object */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import PhoneInput from 'react-phone-input-2';
-import { Link } from 'gatsby';
+import { Spinner } from 'reactstrap';
+import firebase from 'gatsby-plugin-firebase';
 import Layout from '../components/Layout';
+import Cols4 from '../components/cols4';
+import 'firebase/database';
 import '../styles/index.scss';
 import 'react-phone-input-2/lib/style.css';
 import auto1 from '../images/auto1.webp';
@@ -28,6 +30,14 @@ import TakeNumber from '../components/TakeNumber';
 
 export default () => {
     const [phone, setValue] = useState('+ 375 ()');
+    const [data, setData] = useState('');
+    const fetchDataDefault = async () => {
+        const result = await firebase.database().ref('snow').once('value').then((snapshot) => snapshot.val());
+        setData(result);
+      };
+      useEffect(() => {
+        fetchDataDefault();
+      }, []);
     return (
         <>
             <Layout>
@@ -64,88 +74,7 @@ export default () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                10 т / 8 м
-<sup>3</sup>
-                                            </td>
-                                            <td>
-                                                180 руб.
-</td>
-                                            <td>
-                                                215 руб.
-</td>
-                                            <td>
-                                                250 руб.
-</td>
-                                            <td>2 руб./ км</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                10 т / 12 м
-<sup>3</sup>
-                                            </td>
-                                            <td>
-                                                200 руб.
-</td>
-                                            <td>
-                                                235 руб.
-</td>
-                                            <td>
-                                                270 руб.
-</td>
-                                            <td>2 руб. / км</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                10 т / 14 м
-<sup>3</sup>
-                                            </td>
-                                            <td>
-                                                220 руб.
-</td>
-                                            <td>
-                                                255 руб.
-</td>
-                                            <td>
-                                                290 руб.
-</td>
-                                            <td>2 руб. / км</td>
-                                        </tr>
-                                        {' '}
-                                        <tr>
-                                            <td>
-                                                20 т / 12 м
-<sup>3</sup>
-                                            </td>
-                                            <td>
-                                                250 руб.
-</td>
-                                            <td>
-                                                290 руб.
-</td>
-                                            <td>
-                                                330 руб.
-</td>
-                                            <td>2 руб. / км</td>
-                                        </tr>
-                                        {' '}
-                                        <tr>
-                                            <td>
-                                                20 т / 16 м
-<sup>3</sup>
-                                            </td>
-                                            <td>
-                                                350 руб.
-</td>
-                                            <td>
-                                                390 руб.
-</td>
-                                            <td>
-                                                430 руб.
-</td>
-                                            <td>2 руб. / км</td>
-                                        </tr>
+                                    {data ? data.map((item, index) => (index === 0 ? '' : <Cols4 array={data} index={index} isEdit={false} setData={setData} />)) : <Spinner color="primary" />}
                                     </tbody>
                                 </table>
                                 <div className="table-details">
