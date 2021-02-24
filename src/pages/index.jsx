@@ -58,7 +58,7 @@ export default () => {
           <section className="services">
             <h2>Услуги и стоимость</h2>
             <div className="service-cards-wrapper d-flex flex-wrap">
-              <Link className="service-card col-4" to="/trash">
+              <Link className="service-card col-12 col-md-4" to="/trash">
                 <div>
                   <h3>Вывоз мусора</h3>
                   <div className="card-img img1">
@@ -66,7 +66,7 @@ export default () => {
                   </div>
                 </div>
               </Link>
-              <Link className="service-card col-4" to="/rent">
+              <Link className="service-card col-12 col-md-4" to="/rent">
                 <div>
                   <h3>Аренда контейнеров</h3>
                   <div className="card-img img2">
@@ -74,7 +74,7 @@ export default () => {
                   </div>
                 </div>
               </Link>
-              <Link className="service-card col-4" to="/snow">
+              <Link className="service-card col-12 col-md-4" to="/snow">
                 <div>
                   <h3>Уборка и вывоз снега</h3>
                   <div className="card-img img3">
@@ -82,7 +82,7 @@ export default () => {
                   </div>
                 </div>
               </Link>
-              <Link className="service-card col-4" to="/transportation">
+              <Link className="service-card col-12 col-md-4" to="/transportation">
                 <div>
                   <h3>Грузоперевозки</h3>
                   <div className="card-img img4">
@@ -90,7 +90,7 @@ export default () => {
                   </div>
                 </div>
               </Link>
-              <Link className="service-card col-4" to="/container">
+              <Link className="service-card col-12 col-md-4" to="/container">
                 <div>
                   <h3>Продажа контейнеров ТБО</h3>
                   <div className="card-img img5">
@@ -98,7 +98,7 @@ export default () => {
                   </div>
                 </div>
               </Link>
-              <Link className="service-card col-4" to="/movers">
+              <Link className="service-card col-12 col-md-4" to="/movers">
                 <div>
                   <h3>Услуги грузчиков</h3>
                   <div className="card-img img6">
@@ -243,12 +243,12 @@ export default () => {
             <div className="gallery">
               <h2>Наши работы</h2>
               <div className="gallery-wrapper d-flex flex-wrap">
-                <img className="col-4" src={gallery1} width="360" height="247" alt="Наша работа" />
-                <img className="col-4" src={gallery2} width="360" height="247" alt="Наша работа" />
-                <img className="col-4" src={gallery3} width="360" height="247" alt="Наша работа" />
-                <img className="col-4" src={gallery4} width="360" height="247" alt="Наша работа" />
-                <img className="col-4" src={gallery5} width="360" height="247" alt="Наша работа" />
-                <img className="col-4" src={gallery6} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery1} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery2} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery3} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery4} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery5} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery6} width="360" height="247" alt="Наша работа" />
               </div>
             </div>
             <TakeNumber />

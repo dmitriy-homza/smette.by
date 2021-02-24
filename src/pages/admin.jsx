@@ -3,10 +3,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'gatsby';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col, Spinner } from 'reactstrap';
 import '../styles/index.scss';
 import firebase from 'gatsby-plugin-firebase';
+import 'firebase/database';
+import 'firebase/auth';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import classnames from 'classnames';
 import Layout from '../components/Layout';
