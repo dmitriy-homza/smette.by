@@ -253,14 +253,20 @@ main {
                     align-items: center;
                     background-size: cover;
                     background-repeat: no-repeat;
-                    a {
-                        font-family: "Pragmatica", sans-serif;
+                }
+                a {
+                    position: absolute;
+                    transform: translate(-50%, 0%);
+                    left: 50%;
+                    bottom: 0rem;
+                  }
+                a {
+                    font-family: "Pragmatica", sans-serif;
+                    transition: 0.3s;
+                    font-weight: 200;
+                    &:hover {
+                        box-shadow: 0 0 0.3125rem 0rem #ffffff;
                         transition: 0.3s;
-                        font-weight: 200;
-                        &:hover {
-                            box-shadow: 0 0 0.3125rem 0rem #ffffff;
-                            transition: 0.3s;
-                        }
                     }
                 }
                 .img1 {

@@ -903,14 +903,46 @@ background-size: 85% !important;
   header {
     .wrapper {
       .navigation-line {
+        height: 3.8625rem;
+        .dropdown-menu {
+          transform: unset !important;
+        }
+        .mobile {
+          width: 8.8rem;
+          justify-content: space-between;
+          display: flex;
+        }
+        .navbar-toggler {
+          padding: 0px;
+        }
+        .navbar-brand {
+          margin-right: 0rem;
+          img {
+            width: 38px;
+            height: 27px;
+          }
+          span {
+            font-size: 1.2rem;
+          }
+        }
         .navbar-collapse {
           position: absolute;
-          top: 105px;
+          top: 110px;
           left: 0px;
           z-index: 10;
           width: 100%;
           background-color: #191919;
           padding: 0.5rem 2rem;
+          ul {
+            li {
+              a {
+                color: $yellow-primary;
+                &:hover {
+                  color: white;
+                }
+              }
+            }
+          }
         }
         .dropdown-menu {
           display: block;
@@ -952,14 +984,26 @@ background-size: 85% !important;
         }
         
         .mobile {
-          display: block;
-      
+          display: flex;
             img {
               width: 24px;
               height: 24px;
             }
           }
         }
+    }
+    .info-line {
+      .wrapper {
+        height: 3rem;
+        justify-content: space-around;
+        div {
+          a {
+            span {
+              font-size: 16px;
+            }
+          }
+        }
+      }
     }
   }
   h1 {
@@ -985,19 +1029,86 @@ background-size: 85% !important;
   
 
 .hello {
+  height: 370px !important;
   .wrapper {
     .text-block {
+      .line {
+        left: 1.4rem !important;
+        top: -6rem !important;
+        height: 3px !important;
+        width: 63px !important;
+      }
       h1 {
         width: 310px !important;
+        top: -13rem !important;
+        left: 1.3rem !important;
       }
       ul {
+        left: -1.2rem !important;
         width: 100% !important;
+        li {
+          font-size: 11px !important;
+          padding-left: 1.1rem !important;
+          background-size: 13px !important;
+        }
       }
     }
   }
-  img {
+  .car-img {
     width: 217px !important;
     height: 178px!important;
+    right: 0.3rem !important;
+    top: -7.4375rem !important;
+  }
+}
+.services {
+  padding-bottom: 0px !important;
+  width: 100%;
+  h2 {
+    margin-top: 0.9375rem !important;
+  }
+  .service-cards-wrapper {
+margin-top: 0px;
+  }
+  .service-card {
+    margin-bottom: 0rem;
+    h3 {
+      font-size: 24px;
+      width: 84%;
+      position: absolute;
+      transform: translate(-50%, 0%);
+      left: 50%;
+      color: white;
+      font-weight: 600;
+      top: 42%;
+      z-index: 10;
+    }
+    .card-img {
+      filter: brightness(0.5);
+      transition: 0.3s;
+      &:hover {
+        transition: 0.3s;
+        filter: brightness(1);
+      }
+    }
+    a {
+      position: absolute;
+      transform: translate(-50%, 0%);
+      left: 50%;
+      bottom: 0rem;
+    }
+  }
+  .take-number {
+    margin-top: 2rem;
+    .form {
+      margin-top: 1.375rem;
+      form {
+        align-content: center;
+        .react-tel-input {
+          width: min-content !important;
+        }
+      }
+    }
   }
 }
 .contacts {

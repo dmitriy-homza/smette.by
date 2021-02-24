@@ -45,7 +45,13 @@ export default () => {
                   Минской области
                 </h1>
                 <img className="line" src={line} alt="line" />
-                <ul>
+                <ul className="mobile">
+                  <li>пунктуальность</li>
+                  <li>опыт работы более 5 лет</li>
+                  <li>собственный автопарк</li>
+                  <li>низкие цены</li>
+                </ul>
+                <ul className="desktop">
                   <li>пунктуальность и индивидуальный подход</li>
                   <li>опыт работы более 5 лет</li>
                   <li>собственный автопарк и штат грузчиков</li>
@@ -61,49 +67,43 @@ export default () => {
               <Link className="service-card col-12 col-md-4" to="/trash">
                 <div>
                   <h3>Вывоз мусора</h3>
-                  <div className="card-img img1">
-                    <Link to="/trash">Подробная стоимость</Link>
-                  </div>
+                  <div className="card-img img1" />
+                  <Link to="/trash">Подробная стоимость</Link>
                 </div>
               </Link>
               <Link className="service-card col-12 col-md-4" to="/rent">
                 <div>
                   <h3>Аренда контейнеров</h3>
-                  <div className="card-img img2">
-                    <Link to="/rent">Подробная стоимость</Link>
-                  </div>
+                  <div className="card-img img2" />
+                  <Link to="/rent">Подробная стоимость</Link>
                 </div>
               </Link>
               <Link className="service-card col-12 col-md-4" to="/snow">
                 <div>
                   <h3>Уборка и вывоз снега</h3>
-                  <div className="card-img img3">
-                    <Link to="/snow">Подробная стоимость</Link>
-                  </div>
+                  <div className="card-img img3" />
+                  <Link to="/snow">Подробная стоимость</Link>
                 </div>
               </Link>
               <Link className="service-card col-12 col-md-4" to="/transportation">
                 <div>
                   <h3>Грузоперевозки</h3>
-                  <div className="card-img img4">
-                    <Link to="/transportation">Подробная стоимость</Link>
-                  </div>
+                  <div className="card-img img4" />
+                  <Link to="/transportation">Подробная стоимость</Link>
                 </div>
               </Link>
               <Link className="service-card col-12 col-md-4" to="/container">
                 <div>
                   <h3>Продажа контейнеров ТБО</h3>
-                  <div className="card-img img5">
-                    <Link to="/container">Подробная стоимость</Link>
-                  </div>
+                  <div className="card-img img5" />
+                  <Link to="/container">Подробная стоимость</Link>
                 </div>
               </Link>
               <Link className="service-card col-12 col-md-4" to="/movers">
                 <div>
                   <h3>Услуги грузчиков</h3>
-                  <div className="card-img img6">
-                    <Link to="/movers">Подробная стоимость</Link>
-                  </div>
+                  <div className="card-img img6" />
+                  <Link to="/movers">Подробная стоимость</Link>
                 </div>
               </Link>
             </div>
