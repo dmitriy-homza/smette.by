@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
+import SimpleImageSlider from 'react-simple-image-slider';
 import Layout from '../components/Layout';
 import '../styles/index.scss';
 import carImg from '../images/car.webp';
@@ -23,6 +24,14 @@ import TakeNumber from '../components/TakeNumber';
 
 export default () => {
   const [phone, setValue] = useState('+ 375 ()');
+  const images = [
+    { url: `${gallery1}` },
+    { url: `${gallery2}` },
+    { url: `${gallery3}` },
+    { url: `${gallery4}` },
+    { url: `${gallery5}` },
+    { url: `${gallery6}` },
+  ];
   return (
     <>
       <Helmet>
@@ -230,7 +239,7 @@ export default () => {
               </div>
             </div>
             <div className="auto-details">
-              <p>Для юридических лиц стоимость при безналичном расчете увеличивается на 10 - 20%</p>
+              <p>Для юридических лиц стоимость при безналичном расчете увеличивается на 10-20%</p>
               <p>
                 Коммерческие предложения просим высылать на электронную почту -
                 {' '}
@@ -242,7 +251,7 @@ export default () => {
           <section className="our-works">
             <div className="gallery">
               <h2>Наши работы</h2>
-              <div className="gallery-wrapper d-flex flex-wrap">
+              <div className="gallery-wrapper desktop d-flex flex-wrap">
                 <img className="col-12 col-md-4" src={gallery1} width="360" height="247" alt="Наша работа" />
                 <img className="col-12 col-md-4" src={gallery2} width="360" height="247" alt="Наша работа" />
                 <img className="col-12 col-md-4" src={gallery3} width="360" height="247" alt="Наша работа" />
@@ -250,6 +259,16 @@ export default () => {
                 <img className="col-12 col-md-4" src={gallery5} width="360" height="247" alt="Наша работа" />
                 <img className="col-12 col-md-4" src={gallery6} width="360" height="247" alt="Наша работа" />
               </div>
+              <div className="mobile slider">
+                <SimpleImageSlider
+                  width={360}
+                  height={247}
+                  showNavs
+                  showBullets
+                  images={images}
+                />
+              </div>
+
             </div>
             <TakeNumber />
           </section>
