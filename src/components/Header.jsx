@@ -54,6 +54,13 @@ const Header = () => {
               </svg>
             </NavbarToggler>
             <Collapse isOpen={isOpen} navbar>
+              <div className="work-time mobile">
+                <p>
+                  8.00-20.00
+                  <br />
+                  без выходных
+                </p>
+              </div>
               <Nav className="mr-auto" navbar>
                 <Dropdown nav isOpen={dropdownOpen} onMouseLeave={() => setDropdownOpen(false)} onMouseEnter={() => setDropdownOpen(true)}>
                   <DropdownToggle nav caret>

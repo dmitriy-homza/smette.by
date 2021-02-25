@@ -932,7 +932,17 @@ background-size: 85% !important;
           z-index: 10;
           width: 100%;
           background-color: #191919;
-          padding: 0.5rem 2rem;
+          padding: 0.5rem 25px;
+          .work-time {
+            position: absolute;
+            top: 19px;
+            right: 10px;
+            z-index: 2000;
+            width: auto;
+            p {
+              font-size: 14px !important;
+            }
+          }
           ul {
             li {
               a {
@@ -947,6 +957,11 @@ background-size: 85% !important;
         .dropdown-menu {
           display: block;
           position: relative !important;
+          a {
+            font-weight: 400 !important;
+            padding: 0.25rem 0.5rem !important;
+            font-size: 14px !important;
+          }
         }
         .line {
           fill: none;
@@ -1155,19 +1170,10 @@ margin-top: 0px !important;
   .gallery {
     width: 100%;
   }
-  .slider {
-    width: 100%;
-    padding: 0px 30px;
-    & > div {
-      border-radius: 12px !important;
-      width: 100% !important;
-      height: calc(100vw / 1.5 - 30px / 1.5) !important;
-      & > div {
-        border-radius: 12px !important;
-        width: calc(100% - 60px) !important;
-        height: calc(100vw / 1.5 - 30px / 1.5) !important;
-      }
-    }
+  .sliderik {
+    width: auto;
+    border-radius: 12px;
+    margin: 0px 38px;
   }
   .take-number {
     display: none;
@@ -1227,6 +1233,30 @@ footer {
             font-size: 12px;
           }
         }
+      }
+    }
+  }
+}
+.custom-page {
+  h1, h2 {
+    width: auto !important;
+    margin: 25px 38px 10px !important;
+    font-size: 22px !important;
+  }
+  .table-wrapper {
+    width: 100% !important;
+  }
+  table {
+    th:last-child {
+      padding-right: 0.7rem !important;
+    }
+    th:first-child {
+      padding-left: 0.7rem !important;
+    }
+    td, th {
+      font-size: 12px !important;
+      pre {
+        font-size: 12px !important;
       }
     }
   }

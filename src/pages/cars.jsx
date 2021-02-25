@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import Carousel from 'nuka-carousel';
 import Layout from '../components/Layout';
 import '../styles/index.scss';
 import 'react-phone-input-2/lib/style.css';
@@ -162,13 +163,31 @@ export default () => {
           <section className="our-works">
             <div className="gallery">
               <h2>Наши работы</h2>
-              <div className="gallery-wrapper d-flex flex-wrap">
-                <img className="col-4" src={gallery1} width="360" height="247" alt="Наша работа" />
-                <img className="col-4" src={gallery2} width="360" height="247" alt="Наша работа" />
-                <img className="col-4" src={gallery3} width="360" height="247" alt="Наша работа" />
-                <img className="col-4" src={gallery4} width="360" height="247" alt="Наша работа" />
-                <img className="col-4" src={gallery5} width="360" height="247" alt="Наша работа" />
-                <img className="col-4" src={gallery6} width="360" height="247" alt="Наша работа" />
+              <div className="gallery-wrapper desktop d-flex flex-wrap">
+                <img className="col-12 col-md-4" src={gallery1} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery2} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery3} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery4} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery5} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery6} width="360" height="247" alt="Наша работа" />
+              </div>
+              <div className="mobile sliderik">
+                <Carousel
+                  defaultControlsConfig={{
+                    nextButtonText: '➞',
+                    prevButtonText: '🠔',
+                    pagingDotsStyle: {
+                      fill: 'white',
+                    },
+                  }}
+                >
+                  <img src={gallery1} alt="Наша работа" />
+                  <img src={gallery2} alt="Наша работа" />
+                  <img src={gallery3} alt="Наша работа" />
+                  <img src={gallery4} alt="Наша работа" />
+                  <img src={gallery5} alt="Наша работа" />
+                  <img src={gallery6} alt="Наша работа" />
+                </Carousel>
               </div>
             </div>
             <TakeNumber />

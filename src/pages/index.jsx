@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
-import SimpleImageSlider from 'react-simple-image-slider';
+import Carousel from 'nuka-carousel';
 import Layout from '../components/Layout';
 import '../styles/index.scss';
 import carImg from '../images/car.webp';
@@ -24,14 +24,13 @@ import TakeNumber from '../components/TakeNumber';
 
 export default () => {
   const [phone, setValue] = useState('+ 375 ()');
-  const images = [
-    { url: `${gallery1}` },
-    { url: `${gallery2}` },
-    { url: `${gallery3}` },
-    { url: `${gallery4}` },
-    { url: `${gallery5}` },
-    { url: `${gallery6}` },
-  ];
+  const settings = {
+    autoplay: true,
+    centerMode: true,
+    dots: true,
+    duration: 100,
+    shift: 20,
+  };
   return (
     <>
       <Helmet>
@@ -259,16 +258,24 @@ export default () => {
                 <img className="col-12 col-md-4" src={gallery5} width="360" height="247" alt="Наша работа" />
                 <img className="col-12 col-md-4" src={gallery6} width="360" height="247" alt="Наша работа" />
               </div>
-              <div className="mobile slider">
-                <SimpleImageSlider
-                  width={360}
-                  height={247}
-                  showNavs
-                  showBullets
-                  images={images}
-                />
+              <div className="mobile sliderik">
+                <Carousel
+                  defaultControlsConfig={{
+                    nextButtonText: '➞',
+                    prevButtonText: '🠔',
+                    pagingDotsStyle: {
+                      fill: 'white',
+                    },
+                  }}
+                >
+                  <img src={gallery1} alt="Наша работа" />
+                  <img src={gallery2} alt="Наша работа" />
+                  <img src={gallery3} alt="Наша работа" />
+                  <img src={gallery4} alt="Наша работа" />
+                  <img src={gallery5} alt="Наша работа" />
+                  <img src={gallery6} alt="Наша работа" />
+                </Carousel>
               </div>
-
             </div>
             <TakeNumber />
           </section>

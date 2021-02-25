@@ -9,6 +9,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Spinner } from 'reactstrap';
+import Carousel from 'nuka-carousel';
 import firebase from 'gatsby-plugin-firebase';
 import Layout from '../components/Layout';
 import Cols4 from '../components/cols4';
@@ -311,17 +312,35 @@ export default () => {
                         <TakeNumber />
                     </section>
                     <section className="our-works">
-                        <div className="gallery">
-                            <h2>Наши работы</h2>
-                            <div className="gallery-wrapper d-flex flex-wrap">
-                                <img className="col-4" src={gallery1} width="360" height="247" alt="Наша работа" />
-                                <img className="col-4" src={gallery2} width="360" height="247" alt="Наша работа" />
-                                <img className="col-4" src={gallery3} width="360" height="247" alt="Наша работа" />
-                                <img className="col-4" src={gallery4} width="360" height="247" alt="Наша работа" />
-                                <img className="col-4" src={gallery5} width="360" height="247" alt="Наша работа" />
-                                <img className="col-4" src={gallery6} width="360" height="247" alt="Наша работа" />
-                            </div>
-                        </div>
+ <div className="gallery">
+              <h2>Наши работы</h2>
+              <div className="gallery-wrapper desktop d-flex flex-wrap">
+                <img className="col-12 col-md-4" src={gallery1} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery2} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery3} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery4} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery5} width="360" height="247" alt="Наша работа" />
+                <img className="col-12 col-md-4" src={gallery6} width="360" height="247" alt="Наша работа" />
+              </div>
+              <div className="mobile sliderik">
+                <Carousel
+                  defaultControlsConfig={{
+                    nextButtonText: '➞',
+                    prevButtonText: '🠔',
+                    pagingDotsStyle: {
+                      fill: 'white',
+                    },
+                  }}
+                >
+                  <img src={gallery1} alt="Наша работа" />
+                  <img src={gallery2} alt="Наша работа" />
+                  <img src={gallery3} alt="Наша работа" />
+                  <img src={gallery4} alt="Наша работа" />
+                  <img src={gallery5} alt="Наша работа" />
+                  <img src={gallery6} alt="Наша работа" />
+                </Carousel>
+              </div>
+            </div>
                         <TakeNumber />
                     </section>
                     <section className="contacts w-100">
