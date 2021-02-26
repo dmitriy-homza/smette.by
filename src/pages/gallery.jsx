@@ -39,8 +39,8 @@ export default () => {
               <div className="mobile sliderik">
                 <Carousel
                   defaultControlsConfig={{
-                    nextButtonText: '➞',
-                    prevButtonText: '🠔',
+                    nextButtonText: '>',
+                    prevButtonText: '<',
                     pagingDotsStyle: {
                       fill: 'white',
                     },

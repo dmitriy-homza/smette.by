@@ -1212,9 +1212,13 @@ margin-top: 0px !important;
   }
   .sliderik {
     width: auto;
+    height: calc(100vw / 1.46 - 76px / 1.46);
     border-radius: 12px;
-    margin: 0px 38px;
+    margin: 11px 38px;
     box-shadow: 0.25rem 0.25rem 0.625rem rgb(0 0 0 / 25%);
+    img {
+      height: auto;
+    }
   }
   .take-number {
     display: none;
@@ -1364,8 +1368,7 @@ width: unset !important;
   .auto-wrapper {
     .card {
 img {
-  width: 100% !important;
-  height: auto !important;
+  width: auto !important;
 }
     }
   }

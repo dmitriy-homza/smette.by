@@ -261,19 +261,19 @@ export default () => {
               <div className="mobile sliderik">
                 <Carousel
                   defaultControlsConfig={{
-                    nextButtonText: '➞',
-                    prevButtonText: '🠔',
+                    nextButtonText: '>',
+                    prevButtonText: '<',
                     pagingDotsStyle: {
                       fill: 'white',
                     },
                   }}
                 >
-                  <img src={gallery1} alt="Наша работа" />
-                  <img src={gallery2} alt="Наша работа" />
-                  <img src={gallery3} alt="Наша работа" />
-                  <img src={gallery4} alt="Наша работа" />
-                  <img src={gallery5} alt="Наша работа" />
-                  <img src={gallery6} alt="Наша работа" />
+                  <img src={gallery1} width="360" height="247" alt="Наша работа" />
+                  <img src={gallery2} width="360" height="247" alt="Наша работа" />
+                  <img src={gallery3} width="360" height="247" alt="Наша работа" />
+                  <img src={gallery4} width="360" height="247" alt="Наша работа" />
+                  <img src={gallery5} width="360" height="247" alt="Наша работа" />
+                  <img src={gallery6} width="360" height="247" alt="Наша работа" />
                 </Carousel>
               </div>
             </div>
