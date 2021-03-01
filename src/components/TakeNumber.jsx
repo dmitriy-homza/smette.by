@@ -29,7 +29,6 @@ export default () => {
 
   function submitForm(ev) {
     ev.preventDefault();
-    console.log('запуск форумы ', isValid);
     if (/^375[0-9]{9}$/.test(`${phone}`)) {
       setInvalid(false);
       const form = ev.target;
@@ -80,7 +79,7 @@ export default () => {
             <div className={classInput}>
               <form
                 onSubmit={(ev) => submitForm(ev)}
-                action="https://formspree.io/f/moqpzpww"
+                action="https://formspree.io/f/mleoyorw"
                 method="POST"
               >
                 <div className={phone === '+ 375 ()' ? 'react-tel-input' : 'react-tel-input checked'}>
