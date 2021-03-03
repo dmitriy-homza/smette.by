@@ -1091,7 +1091,7 @@ background-size: 85% !important;
         left: 1.3rem !important;
       }
       ul {
-        left: -1.59rem !important;
+        left: -1.2rem !important;
         width: 100% !important;
         li {
           font-size: 0.6875rem !important;
@@ -1456,6 +1456,9 @@ footer .wrapper nav > a {
         top: -5.4375rem !important;
       }
     }
+  }
+  .hello .wrapper .text-block ul {
+    left: -1.59rem !important;
   }
 }
 
