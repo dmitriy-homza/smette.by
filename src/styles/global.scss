@@ -780,21 +780,31 @@ transform: scale(1.1);
             width: 13rem;
           }
           th:last-child {
-            padding-left: 13rem;
+            padding-left: 12rem;
             width: 4rem;
           }
         }
       }
       tbody {
+        td pre {
+          text-align: center;
+        }
         tr {
           td:first-child {
             width: 13.25rem !important;
             padding-left: 1.875rem;
             padding-right: 10rem !important;
         text-align: center;
+        pre {
+          text-align: left;
+        }
           }
+
           td:last-child {
             padding-left: 12rem;
+            pre {
+              text-align: left;
+            }
           }
         }
       }
@@ -1081,7 +1091,7 @@ background-size: 85% !important;
     .text-block {
       .line {
         left: 1.39rem !important;
-        top: -6rem !important;
+        top: -5.6rem !important;
         height: 0.1875rem !important;
         width: 3.9375rem !important;
       }
@@ -1444,6 +1454,18 @@ footer .wrapper nav > a {
 
 
 @media (max-width: 420px) {
+  .hello {
+    .wrapper {
+      .text-block {
+        .line {
+          left: 1.39rem !important;
+          top: -5.3rem !important;
+          height: 0.1875rem !important;
+          width: 3.9375rem !important;
+        }
+      }
+    }
+  }
   html {
     font-size: 14px;
   }
