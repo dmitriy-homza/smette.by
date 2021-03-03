@@ -86,10 +86,9 @@ main {
         }
         .form {
             margin-top: 2.375rem;
-            width: 38.3125rem;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center;
             .submit-button {
                 background-color: $yellow-primary;
                 color: white;
