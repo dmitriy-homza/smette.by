@@ -52,9 +52,7 @@ export default () => {
                     <section className="rent info transportation">
                         <div className="wrapper">
                             <h1>
-                                Аренда контейнеров
-<br />
-                                для физических лиц
+                                Аренда контейнеров                                для физических лиц
                             </h1>
                             <div className="table-wrapper">
                                 <table>

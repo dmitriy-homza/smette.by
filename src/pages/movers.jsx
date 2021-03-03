@@ -50,9 +50,7 @@ export default () => {
                     <section className="info">
                         <div className="wrapper">
                             <h1>
-                                Услуги грузчиков
-<br />
-                                для физических лиц
+                                Услуги грузчиков                                для физических лиц
                             </h1>
                             <div className="table-wrapper">
                                 <table>

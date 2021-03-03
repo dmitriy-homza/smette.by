@@ -50,8 +50,7 @@ export default () => {
                     <section className="info transportation">
                         <div className="wrapper">
                             <h1 className="desktop">
-                            Подробная стоимость вывоза мусора
-<br />
+                            Вывоз мусора
                                 для физических лиц
                             </h1>
                             <h2 className="mobile">
