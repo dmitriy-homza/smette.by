@@ -268,8 +268,8 @@ export default () => {
                     },
                   }}
                 >
-                  <img src={gallery1} width="360" height="247" alt="Наша работа" />
                   <img src={gallery2} width="360" height="247" alt="Наша работа" />
+                  <img src={gallery1} width="360" height="247" alt="Наша работа" />
                   <img src={gallery3} width="360" height="247" alt="Наша работа" />
                   <img src={gallery4} width="360" height="247" alt="Наша работа" />
                   <img src={gallery5} width="360" height="247" alt="Наша работа" />

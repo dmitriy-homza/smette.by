@@ -50,7 +50,7 @@ export default () => {
                     <section className="info transportation">
                         <div className="wrapper">
                             <h1>
-                                Подробная стоимость  уборки и вывоза
+                                Уборка и вывоза
 <br />
 снега для физических лиц
                             </h1>
@@ -71,7 +71,7 @@ export default () => {
                                             <th>без грузчиков</th>
                                             <th>с 1-м грузчиком</th>
                                             <th>с 2-мя грузчиками</th>
-                                            <th>тариф при выезде за МКАД</th>
+                                            <th>при выезде за МКАД</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -261,8 +261,8 @@ export default () => {
                     },
                   }}
                 >
-                  <img src={gallery1} alt="Наша работа" />
                   <img src={gallery2} alt="Наша работа" />
+                  <img src={gallery1} alt="Наша работа" />
                   <img src={gallery3} alt="Наша работа" />
                   <img src={gallery4} alt="Наша работа" />
                   <img src={gallery5} alt="Наша работа" />

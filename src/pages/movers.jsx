@@ -50,7 +50,7 @@ export default () => {
                     <section className="info">
                         <div className="wrapper">
                             <h1>
-                                Подробная стоимость услуг грузчиков
+                                Услуги грузчиков
 <br />
                                 для физических лиц
                             </h1>
@@ -93,12 +93,17 @@ export default () => {
                                         Дополнительное время услуг грузчика - 8-40 руб./ час, в зависимости от сложности
                                         и характера выполняемых работ
                                     </p>
-                                    <div className="two-columns">
+                                    <div className="two-columns desktop">
                                         <p>Дополнительно оплачивается:</p>
                                         <div>
                                             <p>сбор мусора в мешки - 1 мешок - 1 рубль</p>
                                             <p>стоимость 1 нового мешка - 1,5 руб., 1 мешка б/у - 50 коп.</p>
                                         </div>
+                                    </div>
+                                    <div className="mobile">
+                                        <p className="font-weight-bold">Дополнительно оплачивается:</p>
+                                            <p className="m-0">Сбор мусора в мешки - 1 мешок - 1 рубль</p>
+                                            <p className="m-0">Стоимость 1 нового мешка - 1,5 руб., 1 мешка б/у - 50 коп.</p>
                                     </div>
                                     <p>
                                         В случае отсутствия лифта стоимость спуска 1 мешка строительного мусора весом
@@ -268,8 +273,8 @@ export default () => {
                     },
                   }}
                 >
-                  <img src={gallery1} alt="Наша работа" />
                   <img src={gallery2} alt="Наша работа" />
+                  <img src={gallery1} alt="Наша работа" />
                   <img src={gallery3} alt="Наша работа" />
                   <img src={gallery4} alt="Наша работа" />
                   <img src={gallery5} alt="Наша работа" />

@@ -332,8 +332,8 @@ export default () => {
                     },
                   }}
                 >
-                  <img src={gallery1} alt="Наша работа" />
                   <img src={gallery2} alt="Наша работа" />
+                  <img src={gallery1} alt="Наша работа" />
                   <img src={gallery3} alt="Наша работа" />
                   <img src={gallery4} alt="Наша работа" />
                   <img src={gallery5} alt="Наша работа" />

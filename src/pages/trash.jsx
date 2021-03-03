@@ -55,7 +55,7 @@ export default () => {
                                 для физических лиц
                             </h1>
                             <h2 className="mobile">
-                            Подробная стоимость вывоза мусора
+                            Вывоз мусора
                                 для физических лиц
                             </h2>
                             <div className="table-wrapper">
@@ -75,7 +75,7 @@ export default () => {
                                             <th>без грузчиков</th>
                                             <th>с 1-м грузчиком</th>
                                             <th>с 2-мя грузчиками</th>
-                                            <th>тариф при выезде за МКАД</th>
+                                            <th>при выезде за МКАД</th>
                                         </tr>
                                     </thead>
                                     <tbody>{data ? data.map((item, index) => (index === 0 ? '' : <Cols4 array={data} index={index} isEdit={false} setData={setData} />)) : <Spinner color="primary" />}</tbody>
@@ -265,8 +265,8 @@ export default () => {
                     },
                   }}
                 >
-                  <img src={gallery1} alt="Наша работа" />
                   <img src={gallery2} alt="Наша работа" />
+                  <img src={gallery1} alt="Наша работа" />
                   <img src={gallery3} alt="Наша работа" />
                   <img src={gallery4} alt="Наша работа" />
                   <img src={gallery5} alt="Наша работа" />

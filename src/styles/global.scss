@@ -1010,9 +1010,13 @@ background-size: 85% !important;
     .info-line {
       .wrapper {
         height: 3rem;
-        justify-content: space-around;
+        justify-content: center;
+        & > div:first-child {
+          margin-right: 1rem;
+        }
         div {
           a {
+            padding-left: 0px;
             span {
               font-size: 1rem;
             }
@@ -1024,6 +1028,15 @@ background-size: 85% !important;
   h1 {
     font-size: 1.375rem !important;
     width: 100%!important;
+  }
+  .hello {
+    .wrapper {
+      .text-block {
+        h1 {
+          line-height: 28px;
+        }
+      }
+    }
   }
   main {
     h2 {
@@ -1047,11 +1060,12 @@ background-size: 85% !important;
       }
       .take-number {
         margin-top: 3rem !important;
+        padding-top: 0.7rem !important;
         h2 {
           margin-top: 0rem !important;
         }
         .form {
-          margin-top: 1.2rem !important;
+          margin-top: 0.5rem !important;
           form {
             align-content: center !important;
             .react-tel-input {
@@ -1066,7 +1080,7 @@ background-size: 85% !important;
   .wrapper {
     .text-block {
       .line {
-        left: 1.4rem !important;
+        left: 1.39rem !important;
         top: -6rem !important;
         height: 0.1875rem !important;
         width: 3.9375rem !important;
@@ -1077,7 +1091,7 @@ background-size: 85% !important;
         left: 1.3rem !important;
       }
       ul {
-        left: -1.2rem !important;
+        left: -1.59rem !important;
         width: 100% !important;
         li {
           font-size: 0.6875rem !important;
@@ -1146,14 +1160,21 @@ margin-top: 0rem !important;
   .auto-wrapper {
     margin-top: 0rem !important;
     justify-content: space-around !important;
+    .additionals {
+      ul {
+        li {
+          margin: 0.2rem 0rem 1.2rem 0rem !important;
+        }
+      }
+    }
     .card {
       margin: 0rem 0.625rem 0.5rem !important;
-      padding: 1rem 1.3125rem 0.6rem !important;
+      padding: 0.6rem 0.86rem 0.4rem !important;
       img {
-        margin: 0.8rem 0rem 0rem;
+        margin: .3rem 0 0.3rem !important;
       }
       ul {
-        margin-top: 0.5rem;
+        margin-top: 0.1rem !important;
       }
     }
   }
@@ -1161,13 +1182,15 @@ margin-top: 0rem !important;
     width: 100%;
     display: flex;
     flex-direction: column;
+    max-width: 26rem !important;
     justify-content: center;
+    padding: 0rem 1rem;
     p, span a {
+      position: unset !important;
       font-weight: 400 !important;
-      left: 0.875rem !important;
       font-size: 1rem !important;
-      padding: 0rem 0rem 0rem 0.875rem !important;
-      width: calc(100% - 0.875rem) !important;
+      padding: 0rem 0rem 0rem !important;
+      width: 100% !important;
       max-width: unset !important;
     }
     span {
@@ -1178,6 +1201,19 @@ margin-top: 0rem !important;
     } 
   }
 }
+main {
+    .containers {
+      .auto-wrapper {
+        .card {
+          img {
+            margin: 1.3rem 0 .9rem !important;
+          }
+        }
+      
+    }
+  }
+}
+
 .info {
   .wrapper {
     padding: 0rem 0rem 0rem;
@@ -1414,11 +1450,26 @@ footer .wrapper nav > a {
   main {
     .hello {
       .car-img {
-        width: 9.7528rem !important;
-        height: 8rem!important;
+        width: calc(65% - 66px) !important;
+        height: auto !important;
         right: 0.3rem !important;
         top: -5.4375rem !important;
       }
     }
+  }
+}
+
+@media (max-width: 350px) {
+  header .wrapper .navigation-line .navbar-brand { 
+    margin-right: 0.8rem;
+  }
+  header .wrapper .navigation-line .mobile { 
+    width: 7.8rem;
+  }
+  .custom-page table td, .custom-page table th { 
+    padding: 0rem 0.25rem !important;
+  }
+  .custom-page table tr td:first-child {
+    padding-left: 0.2rem !important;
   }
 }

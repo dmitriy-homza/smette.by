@@ -79,7 +79,7 @@ export default () => {
             <div className={classInput}>
               <form
                 onSubmit={(ev) => submitForm(ev)}
-                action="https://formspree.io/f/mleoyorw"
+                action="https://formspree.io/f/mzbklobl"
                 method="POST"
               >
                 <div className={phone === '+ 375 ()' ? 'react-tel-input' : 'react-tel-input checked'}>

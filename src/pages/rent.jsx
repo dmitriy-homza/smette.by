@@ -52,7 +52,7 @@ export default () => {
                     <section className="rent info transportation">
                         <div className="wrapper">
                             <h1>
-                                Подробная стоимость  аренды контейнеров
+                                Аренда контейнеров
 <br />
                                 для физических лиц
                             </h1>
@@ -71,7 +71,7 @@ export default () => {
                                                 за 5 дней (минимальный заказ)
                                             </th>
                                             <th>
-                                                Тариф при выезде
+                                                при выезде
                                                 <br />
 за МКАД
 </th>
@@ -251,8 +251,8 @@ export default () => {
                     },
                   }}
                 >
-                  <img src={gallery1} alt="Наша работа" />
                   <img src={gallery2} alt="Наша работа" />
+                  <img src={gallery1} alt="Наша работа" />
                   <img src={gallery3} alt="Наша работа" />
                   <img src={gallery4} alt="Наша работа" />
                   <img src={gallery5} alt="Наша работа" />
