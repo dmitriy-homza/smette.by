@@ -135,7 +135,7 @@ main {
     .hello {
         width: 100%;
         height: 38.5rem;
-        background-image: url("../images/trash-bg.webp");
+        background-image: url("../images/trash-bg.jpg");
         background-position-y: 90%;
         background-size: 100%;
         .wrapper {
@@ -269,22 +269,22 @@ main {
                     }
                 }
                 .img1 {
-                    background-image: url("../images/service1.webp");
+                    background-image: url("../images/service1.jpg");
                 }
                 .img2 {
-                    background-image: url("../images/service2.webp");
+                    background-image: url("../images/service2.jpg");
                 }
                 .img3 {
-                    background-image: url("../images/service3.webp");
+                    background-image: url("../images/service3.jpg");
                 }
                 .img4 {
-                    background-image: url("../images/service4.webp");
+                    background-image: url("../images/service4.jpg");
                 }
                 .img5 {
-                    background-image: url("../images/service5.webp");
+                    background-image: url("../images/service5.jpg");
                 }
                 .img6 {
-                    background-image: url("../images/service6.webp");
+                    background-image: url("../images/service6.jpg");
                 }
                 a {
                     background-color: $yellow-primary;
@@ -348,7 +348,7 @@ main {
         }
     }
     .auto {
-        background: url("../images/trash-bg.webp");
+        background: url("../images/trash-bg.jpg");
         width: 100%;
         justify-content: end;
         padding-bottom: 5rem;

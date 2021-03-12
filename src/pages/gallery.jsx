@@ -7,12 +7,12 @@ import Carousel from 'nuka-carousel';
 import Layout from '../components/Layout';
 import '../styles/index.scss';
 import 'react-phone-input-2/lib/style.css';
-import gallery1 from '../images/gallery1.webp';
-import gallery2 from '../images/gallery2.webp';
-import gallery3 from '../images/gallery3.webp';
-import gallery4 from '../images/gallery4.webp';
-import gallery5 from '../images/gallery5.webp';
-import gallery6 from '../images/gallery6.webp';
+import gallery1 from '../images/gallery1.jpg';
+import gallery2 from '../images/gallery2.jpg';
+import gallery3 from '../images/gallery3.jpg';
+import gallery4 from '../images/gallery4.jpg';
+import gallery5 from '../images/gallery5.jpg';
+import gallery6 from '../images/gallery6.jpg';
 import TakeNumber from '../components/TakeNumber';
 
 export default () => {
